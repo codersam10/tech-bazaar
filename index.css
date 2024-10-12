@@ -7,8 +7,8 @@
   color: hsl(0, 0%, 100%);
 }
 
-body{
-  background-color: hsl(0deg, 0%, 8%)!important;
+body {
+  background-color: hsl(0deg, 0%, 8%) !important;
 }
 
 header {
@@ -69,7 +69,7 @@ form button[type="submit"] {
   background-color: hsl(210, 11%, 14%);
 }
 
-form label{
+form label {
   display: none;
 }
 
@@ -127,8 +127,8 @@ form #login-link:hover {
   height: 20rem;
 }
 
-.hero-carousel .carousel-inner .carousel-item{
-  background-image:ur;
+.hero-carousel .carousel-inner .carousel-item {
+  background-image: ur;
 }
 
 .hero-carousel .carousel-inner .row {
@@ -141,19 +141,17 @@ form #login-link:hover {
   font-weight: 800;
 }
 
-.hero-carousel .product-details > .product-price{
-  font-size:1rem;
-  font-weight:600;
+.hero-carousel .product-details > .product-price {
+  font-size: 1rem;
+  font-weight: 600;
+}
 
-} 
-
-
-.hero-carousel .product-details .old-price{
+.hero-carousel .product-details .old-price {
   text-decoration: line-through;
   color: hsl(0, 0%, 50%);
 }
 
-.hero-carousel .product-details button{
+.hero-carousel .product-details button {
   background-color: hsl(0, 96%, 42%);
   border: none;
   padding: 0.3rem 1rem;
@@ -162,19 +160,34 @@ form #login-link:hover {
   font-size: 0.8rem;
 }
 
-.hero-carousel .product-details button:hover{
+.hero-carousel .product-details button:hover {
   box-shadow: 0px 0px 10px hsl(0, 96%, 42%);
 }
 
-footer h5{
+.advantage-section .row .col-12 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.advantage-section .row .col-12 p {
+  margin-bottom: 0;
+}
+
+.advantage-section img {
+  height: 2.5rem;
+}
+
+footer h5 {
   font-weight: 600;
 }
 
-footer ul li a{
+footer ul li a {
   color: grey;
   text-decoration: none;
 }
 
-footer ul li a:hover{
+footer ul li a:hover {
   text-decoration: underline;
 }
