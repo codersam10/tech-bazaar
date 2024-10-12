@@ -1,13 +1,10 @@
+// get elements section
 const profileIcon = document.getElementById("profile-icon");
-// signup modal background
 const signupModalBackground = document.getElementById(
   "signup-modal-background"
 );
-
-// close form icon
 const closeIcon = document.getElementsByClassName("close-icon")[0];
 const form = document.getElementById("signup-form");
-
 const password = document.getElementById("password");
 const passwordVisiblityIcon = document.getElementById(
   "password-visiblity-icon"
@@ -17,24 +14,28 @@ const confirmPasswordVisiblityIcon = document.getElementById(
   "confirm-password-visiblity-icon"
 );
 
+/*functionality section*/
+// open modal
 profileIcon.addEventListener("click", () => {
   signupModalBackground.classList.remove("d-none");
 });
 
+// close modal on background click
 signupModalBackground.addEventListener("click", (e) => {
   signupModalBackground.classList.add("d-none");
 });
 
+// prevent events inside form from propogating/bubbling to parent
 form.addEventListener("click", (e) => {
   e.stopPropagation();
 });
 
+// close modal
 closeIcon.addEventListener("click", () => {
   signupModalBackground.classList.add("d-none");
 });
 
-//passowrd visibility functionality
-
+//form passowrd hide/show functionality
 passwordVisiblityIcon.addEventListener("click", (e) => {
   if (password.type === "password") {
     password.type = "text";
@@ -44,7 +45,6 @@ passwordVisiblityIcon.addEventListener("click", (e) => {
     passwordVisiblityIcon.src = "./images/visibility_off.svg";
   }
 });
-
 confirmPasswordVisiblityIcon.addEventListener("click", (e) => {
   alert("hello");
   if (confirmPassword.type === "password") {
