@@ -32,7 +32,7 @@
       src="./index.js"
     ></script>
   </head>
-  <body class="bg-dark">
+  <body>
     <header>
       <nav class="d-flex justify-content-between align-items-center">
         <a
@@ -83,10 +83,10 @@
       <!-- signup modal -->
       <div
         id="signup-modal-background"
-        class="position-absolute top-0 end-0 bottom-0 start-0 d-flex justify-content-center align-items-center bg-black bg-opacity-75 d-none"
+        class="z-3 position-fixed top-0 end-0 bottom-0 start-0 d-flex justify-content-center align-items-center bg-black bg-opacity-75 d-none"
       >
         <form
-          class="col-11 col-md-6 col-lg-4 col-xl-3 p-4 bg-dark position-relative"
+          class="col-11 col-md-5 col-lg-4 col-xl-3 p-3 bg-dark position-relative d-flex flex-column gap-2"
           action="#"
           method="post"
           id="signup-form"
@@ -159,14 +159,14 @@
             </div>
           </div>
           <button
-            class="w-100 md- mt-4"
+            class="w-100 md- mt-3"
             type="submit"
           >
             Signup
           </button>
-          <div class="login-with-wrapper mt-5">
+          <div class="login-with-wrapper position-relative">
             <hr class="" />
-            <span class="bg-dark px-2">or login with</span>
+            <span class="bg-dark px-4">or login with</span>
           </div>
           <div class="other-signup-options d-flex gap-2">
             <button type="button">Facebook</button>
@@ -176,5 +176,192 @@
         </form>
       </div>
     </header>
+    <main>
+      <section class="hero-carousel">
+        <div
+          id="product-carousel"
+          class="carousel slide h-100"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#product-carousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#product-carousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#product-carousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner h-100">
+            <div
+              class="carousel-item active h-100 py-4"
+              data-bs-interval="3000"
+            >
+              <div class="container h-100">
+                <div class="row h-100 align-content-center">
+                  <div
+                    class="col-6 h-100 d-flex justify-content-center align-items-center"
+                  >
+                    <div class="product-details">
+                      <h6>boAt Airdopes 131</h6>
+                      <p class="product-quote">
+                        Featherwieght For Comfort All-Day.
+                      </p>
+                      <p class="product-price">
+                        ₹1,099 <span class="old-price">₹2,990</span>
+                      </p>
+                      <a href="#"><button>Shop Now</button></a>
+                    </div>
+                  </div>
+                  <div class="col-6 h-100">
+                    <img
+                      src="./images/products/boat131-3.png"
+                      class="h-100 w-100 object-fit-contain"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="carousel-item h-100 py-4"
+              data-bs-interval="3000"
+            >
+              <div class="container h-100">
+                <div class="row h-100 align-content-center">
+                  <div
+                    class="col-6 h-100 d-flex justify-content-center align-items-center"
+                  >
+                    <div class="product-details">
+                      <h6>Sony WH-XB910N</h6>
+                      <p class="product-quote">
+                        Give Your Favourite Music A Boost.
+                      </p>
+                      <p class="product-price">
+                        ₹13,489 <span class="old-price">₹19,990</span>
+                      </p>
+                      <a href="#"><button>Shop Now</button></a>
+                    </div>
+                  </div>
+                  <div class="col-6 h-100">
+                    <img
+                      src="./images/products/sonyXb910n-1.png"
+                      class="h-100 w-100 object-fit-contain"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="carousel-item h-100 py-4"
+              data-bs-interval="3000"
+            >
+              <div class="container h-100">
+                <div class="row h-100 align-content-center">
+                  <div
+                    class="col-6 h-100 d-flex justify-content-center align-items-center"
+                  >
+                    <div class="product-details">
+                      <h6>JBL Live 660NC</h6>
+                      <p class="product-quote">
+                        Keep The Noise Out,Or in. You Choose
+                      </p>
+                      <p class="product-price">
+                        ₹9,999 <span class="old-price">₹14,999</span>
+                      </p>
+                      <a href="#"><button>Shop Now</button></a>
+                    </div>
+                  </div>
+                  <div class="col-6 h-100">
+                    <img
+                      src="./images/products/jbl660nc-1.png"
+                      class="h-100 w-100 object-fit-contain"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-3">
+            <img
+              class="logo"
+              src="./images/logo.svg"
+              alt="logo"
+            />
+            <p>
+              Subscirbe to our Email alerts to recieve early discount offers,
+              and new products info.
+            </p>
+
+            <form action="#">
+              <label for="footer-email"></label>
+              <input
+                id="footer-email"
+                type="email"
+              />
+              <button
+                class="my-3"
+                type="submit"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <h5>Help</h5> 
+            <ul class="list-unstyled">
+              <li><a href="#"> FAQs </a></li>
+              <li><a href="#">Track Order</a></li>
+              <li><a href="#">Cancel Order</a></li>
+              <li><a href="#">Return Order</a></li>
+              <li><a href="#">Warranty info</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <h5>Policies</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Return Policy</a></li>
+              <li><a href="#">Security</a></li>
+              <li><a href="#">Sitemap</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <h5>Company</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Service Center</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Affiliates</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
