@@ -13,9 +13,10 @@ const confirmPassword = document.getElementById("confirm-password");
 const confirmPasswordVisiblityIcon = document.getElementById(
   "confirm-password-visiblity-icon"
 );
+const productCategories = document.getElementsByClassName("product-category");
 
 /*functionality section*/
-// open modal
+// open form modal
 profileIcon.addEventListener("click", () => {
   signupModalBackground.classList.remove("d-none");
 });
@@ -55,3 +56,15 @@ confirmPasswordVisiblityIcon.addEventListener("click", (e) => {
     confirmPasswordVisiblityIcon.src = "./images/visibility_off.svg";
   }
 });
+
+console.log(productCategories);
+// product category functionality
+
+for (let i = 0; i < productCategories.length; i++) {
+  productCategories[i].addEventListener("click", (e) => {
+    for (let j = 0; j < productCategories.length; j++) {
+      productCategories[j].classList.remove("active");
+    }
+    e.target.classList.add("active");
+  });
+}
