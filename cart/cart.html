@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Cart</title>
+    <!-- Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="./cart.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../home/index.css"
+    />
+
+    <!-- Mininfed Bootstrap 5.3.3 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Minified Bootstrap 5.3.3 JS -->
+    <script
+      defer
+      src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+    <!-- Custom JS -->
+    <script
+      defer
+      src="./cart.js"
+    ></script>
+    <script
+      defer
+      src="../home/index.js"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav class="d-flex justify-content-between align-items-center">
+        <a
+          href="./index.html"
+          class="logo"
+        >
+          <img
+            src="../images/logo.svg"
+            alt="tech bazaar logo"
+          />
+        </a>
+
+        <ul class="d-flex h-100">
+          <li>
+            <a
+              href="#"
+              aria-label="search"
+            >
+              <img
+                src="../images/magnifying-glass.svg"
+                alt="search"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="../cart/cart.html"
+              aria-label="cart"
+              ><img
+                src="../images/cart.svg"
+                alt="cart"
+            /></a>
+          </li>
+          <li>
+            <a
+              class="nav-link"
+              href="#"
+              aria-label="account"
+              ><img
+                id="profile-icon"
+                src="../images/profile.svg"
+                alt=""
+            /></a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- signup modal -->
+      <div
+        id="signup-modal-background"
+        class="z-3 position-fixed top-0 end-0 bottom-0 start-0 d-flex justify-content-center align-items-center bg-black bg-opacity-75 d-none"
+      >
+        <form
+          class="col-11 col-md-5 col-lg-4 col-xl-3 p-3 bg-dark position-relative d-flex flex-column gap-2"
+          action="#"
+          method="post"
+          id="signup-form"
+        >
+          <div class="close-icon-wrapper">
+            <img
+              class="close-icon"
+              src="../images/close.svg"
+              alt=""
+            />
+          </div>
+          <h2>Signup</h2>
+          <p>
+            Already have an account ?
+            <a
+              id="login-link"
+              class="text-white text-decoration-none li"
+              href="#"
+              >Login</a
+            >
+          </p>
+          <div>
+            <label for="username"></label
+            ><input
+              id="username"
+              type="text"
+              placeholder="Username"
+            />
+          </div>
+          <div>
+            <label for="email"></label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Email"
+            />
+          </div>
+          <div>
+            <label for="password"></label>
+            <div class="password-wrapper d-flex align-items-center">
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password"
+              />
+              <span class="px-2"
+                ><img
+                  id="password-visiblity-icon"
+                  src="../images/visibility_off.svg"
+                  alt=""
+              /></span>
+            </div>
+          </div>
+          <div>
+            <label for="confirm-password"></label>
+            <div class="password-wrapper d-flex align-items-center">
+              <input
+                type="password"
+                name="confirm-password"
+                id="confirm-password"
+                placeholder="Confirm Password"
+              />
+              <span class="px-2"
+                ><img
+                  id="confirm-password-visiblity-icon"
+                  src="../images/visibility_off.svg"
+                  alt=""
+              /></span>
+            </div>
+          </div>
+          <button
+            class="w-100 md- mt-3"
+            type="submit"
+          >
+            Signup
+          </button>
+          <div class="login-with-wrapper position-relative">
+            <hr class="" />
+            <span class="bg-dark px-4">or login with</span>
+          </div>
+          <div class="other-signup-options d-flex gap-2">
+            <button type="button">Facebook</button>
+            <button type="button">Google</button>
+            <button type="button">Twitter</button>
+          </div>
+        </form>
+      </div>
+    </header>
+    <main class="container cart-container">
+      <div class="row">
+        <section class="cart-items-section col-12 col-md-7 col-lg-8">
+          <ul class="container">
+            <li>
+              <div class="d-flex">
+                <div class="product-img">
+                  <img
+                    src="../images/products/jbl660nc-1.png"
+                    alt=""
+                  />
+                </div>
+                <div class="flex-grow-1">
+                  <p>JBL Live 660NC Wireless Over-Ear NC Headphones</p>
+                  <p>₹9,999 <span>₹14,999</span></p>
+                  <p class="add-remove">
+                    <button>-</button><span class="add-remove-count">1</span
+                    ><button>+</button>
+                  </p>
+                </div>
+                <div class="delete-img">
+                  <img
+                    src="../images/delete.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <hr />
+            </li>
+
+            <li>
+              <div class="d-flex">
+                <div class="product-img">
+                  <img
+                    src="../images/products/jbl660nc-1.png"
+                    alt=""
+                  />
+                </div>
+                <div class="flex-grow-1">
+                  <p>JBL Live 660NC Wireless Over-Ear NC Headphones</p>
+                  <p>₹9,999 <span>₹14,999</span></p>
+                  <p class="add-remove">
+                    <button>-</button><span class="add-remove-count">1</span
+                    ><button>+</button>
+                  </p>
+                </div>
+                <div class="delete-img">
+                  <img
+                    src="../images/delete.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <hr />
+            </li>
+
+            <li>
+              <div class="d-flex">
+                <div class="product-img">
+                  <img
+                    src="../images/products/jbl660nc-1.png"
+                    alt=""
+                  />
+                </div>
+                <div class="flex-grow-1">
+                  <p>JBL Live 660NC Wireless Over-Ear NC Headphones</p>
+                  <p>₹9,999 <span>₹14,999</span></p>
+                  <p class="add-remove">
+                    <button>-</button><span class="add-remove-count">1</span
+                    ><button>+</button>
+                  </p>
+                </div>
+                <div class="delete-img">
+                  <img
+                    src="../images/delete.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <hr />
+            </li>
+
+            <li>
+              <div class="d-flex">
+                <div class="product-img">
+                  <img
+                    src="../images/products/jbl660nc-1.png"
+                    alt=""
+                  />
+                </div>
+                <div class="flex-grow-1">
+                  <p>JBL Live 660NC Wireless Over-Ear NC Headphones</p>
+                  <p>₹9,999 <span>₹14,999</span></p>
+                  <p class="add-remove">
+                    <button>-</button><span class="add-remove-count">1</span
+                    ><button>+</button>
+                  </p>
+                </div>
+                <div class="delete-img">
+                  <img
+                    src="../images/delete.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <hr />
+            </li>
+
+            <li>
+              <div class="d-flex">
+                <div class="product-img">
+                  <img
+                    src="../images/products/jbl660nc-1.png"
+                    alt=""
+                  />
+                </div>
+                <div class="flex-grow-1">
+                  <p>JBL Live 660NC Wireless Over-Ear NC Headphones</p>
+                  <p>₹9,999 <span>₹14,999</span></p>
+                  <p class="add-remove">
+                    <button>-</button><span class="add-remove-count">1</span
+                    ><button>+</button>
+                  </p>
+                </div>
+                <div class="delete-img">
+                  <img
+                    src="../images/delete.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <hr />
+            </li>
+          </ul>
+        </section>
+
+        <section class="invoice-section col-12 col-md-5 col-lg-4">
+          <h5>Order Summary (5 items)</h5>
+          <div class="invoice-details">
+            <p class="cart-original-price d-flex justify-content-between">
+              <span>Original Price</span><span>₹22,349</span>
+            </p>
+            <p class="cart-discount d-flex justify-content-between">
+              <span>Discount</span><span>- ₹10</span>
+            </p>
+            <p class="d-flex justify-content-between">
+              <span>Delivery</span><span>Free</span>
+            </p>
+            <hr />
+            <p class="d-flex justify-content-between">
+              <span>Total Price</span><span>₹22,349</span>
+            </p>
+            <a href="#"
+              ><button
+                class="cart-checkout-btn"
+                type="button"
+              >
+                Checkout
+              </button></a
+            >
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="pt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-3">
+            <img
+              class="logo"
+              src="../images/logo.svg"
+              alt="logo"
+            />
+            <p>
+              Subscirbe to our Email alerts to recieve early discount offers,
+              and new products info.
+            </p>
+
+            <form action="#">
+              <label for="footer-email"></label>
+              <input
+                id="footer-email"
+                type="email"
+              />
+              <button
+                class="my-3"
+                type="submit"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <h5>Help</h5>
+            <ul class="list-unstyled">
+              <li><a href="#"> FAQs </a></li>
+              <li><a href="#">Track Order</a></li>
+              <li><a href="#">Cancel Order</a></li>
+              <li><a href="#">Return Order</a></li>
+              <li><a href="#">Warranty info</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <h5>Policies</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">Return Policy</a></li>
+              <li><a href="#">Security</a></li>
+              <li><a href="#">Sitemap</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-6 col-lg-3">
+            <h5>Company</h5>
+            <ul class="list-unstyled">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Service Center</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Affiliates</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
