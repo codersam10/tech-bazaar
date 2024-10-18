@@ -47,7 +47,6 @@ passwordVisiblityIcon.addEventListener("click", (e) => {
   }
 });
 confirmPasswordVisiblityIcon.addEventListener("click", (e) => {
-  alert("hello");
   if (confirmPassword.type === "password") {
     confirmPassword.type = "text";
     confirmPasswordVisiblityIcon.src = "./images/visibility_on.svg";
@@ -57,7 +56,6 @@ confirmPasswordVisiblityIcon.addEventListener("click", (e) => {
   }
 });
 
-console.log(productCategories);
 // product category functionality
 
 for (let i = 0; i < productCategories.length; i++) {

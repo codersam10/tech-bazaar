@@ -165,6 +165,10 @@ form #login-link:hover {
   box-shadow: 0px 0px 10px hsl(0, 96%, 42%);
 }
 
+.hero-carousel .product-details button:active {
+  transform: scale(0.95);
+}
+
 .top-products-nav > ul {
   display: flex;
   justify-content: space-around;
@@ -185,18 +189,23 @@ form #login-link:hover {
   padding: 0;
   border: 1px solid hsl(0, 0%, 50%);
   overflow: hidden;
-  transition-duration: 0.3s;
-  will-change: transform, box-shadow;
-  transition-property: transform, box-shadow;
 }
 
-.top-products-section .card:hover {
+.top-products-section .card .card-img {
+  transition-duration: 500ms;
+  will-change: transform;
+  transition-property: transform;
+}
+
+.top-products-section .card:hover .card-img {
+  transform: scale(1.1);
+}
+
+.top-products-section .card .card-body {
   z-index: 1;
-  transform: scale(1.05);
-  box-shadow: 0px 0px 10px hsl(0, 0%, 50%);
 }
 
-.card .ratings {
+.ratings {
   height: 0.8rem;
 }
 
@@ -211,8 +220,13 @@ form #login-link:hover {
 }
 
 .card a:hover {
-  color: hsl(0, 0%, 100%);
-  background-color: hsla(0, 96%, 42%, 0.8);
+  box-shadow: 0px 0px 10px hsla(0, 96%, 42%);
+  background-color: hsl(0, 96%, 42%);
+}
+
+.card a:active {
+  background-color: hsl(0, 96%, 42%) !important;
+  transform: scale(0.95);
 }
 
 .top-products-section .card .card-img {
@@ -236,8 +250,20 @@ form #login-link:hover {
   height: 2.5rem;
 }
 
+footer {
+  background-color: hsl(0, 0%, 0%) !important;
+}
+
 footer h5 {
   font-weight: 600;
+}
+
+footer .submit-btn:hover{
+  box-shadow: 0px 0px 10px hsl(0, 100%, 50%);
+}
+
+footer .submit-btn:active{
+  transform: scale(0.95);
 }
 
 footer ul li a {

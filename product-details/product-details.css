@@ -1,0 +1,17 @@
+.product-details-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.gallery-mini-map img{
+  aspect-ratio: 1 !important;
+}
+
+.product-description-content p {
+    margin: 0 auto;
+  width: 75%;
+  max-width: 24rem;
+  display: flex;
+  justify-content: space-between;
+}
