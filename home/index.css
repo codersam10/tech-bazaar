@@ -13,6 +13,12 @@ body {
 
 header {
   box-shadow: 0px 1px 10px hsl(0, 0%, 20%);
+  backdrop-filter: blur(20px);
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
 }
 
 .logo {
@@ -38,12 +44,26 @@ nav ul {
 }
 
 nav ul img {
-  width: 1.5rem;
+  width: 1.3rem;
   height: 100%;
 }
 
 nav ul li {
   padding: 0 1rem;
+}
+
+.cart-item-count {
+  background: hsl(0, 100%, 50%);
+  display: inline-block;
+  position: absolute;
+  top: -15px;
+  right: 0px;
+  font-size: 0.8rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  text-align: center;
+  align-content: center;
+  border-radius: 50%;
 }
 
 header .search-dropdown a,
@@ -68,16 +88,31 @@ header .profile-dropdown {
   border: 1px solid grey;
   padding: 0.5rem;
   background: hsl(0deg, 0%, 8%);
+  z-index: 1;
   opacity: 0;
+  display: none;
 }
 
-header .search-icon-wrapper:hover  .search-dropdown,
-header .cart-icon-wrapper:hover  .cart-dropdown,
-header .profile-icon-wrapper:hover  .profile-dropdown {
+#profile-signup-btn {
+  border: 1px solid grey;
+  background: hsl(0deg, 0%, 8%);
+  padding: 0.5rem;
+}
+
+#profile-signup-btn:hover {
+  background: hsl(0deg, 0%, 18%);
+}
+
+.dropdown-login:hover {
+  text-decoration: underline;
+}
+
+header .search-icon-wrapper:hover .search-dropdown,
+header .cart-icon-wrapper:hover .cart-dropdown,
+header .profile-icon-wrapper:hover .profile-dropdown {
+  display: block;
   opacity: 1;
-  z-index: 5;
 }
-
 
 form .close-icon-wrapper {
   position: absolute;
@@ -161,8 +196,14 @@ form #login-link:hover {
   height: 20rem;
 }
 
-.hero-carousel .carousel-inner .carousel-item {
-  background-image: ur;
+.carousel-indicators > button {
+  width: 0.5rem !important;
+  height: 0.5rem !important;
+  border-radius: 50%;
+}
+
+.carousel-indicators .active {
+  background-color: red !important;
 }
 
 .hero-carousel .carousel-inner .row {
@@ -210,6 +251,10 @@ form #login-link:hover {
 .top-products-nav > ul > li {
   padding: 0.2rem 0.8rem;
   border-radius: 3px;
+}
+
+.top-products-nav > ul > li:hover {
+  background-color: hsl(0, 96%, 42%);
 }
 
 .top-products-nav > ul > li.active {
@@ -306,4 +351,20 @@ footer ul li a {
 
 footer ul li a:hover {
   text-decoration: underline;
+}
+
+footer .footer-credits {
+  display: flex;
+  justify-content: space-between;
+  height: 2rem;
+}
+
+footer .footer-credits img {
+  width: 100%;
+  height: 100%;
+}
+
+footer .footer-social-links {
+  display: flex;
+  gap: 1rem;
 }

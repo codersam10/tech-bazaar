@@ -2,10 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart</title>
 
     <!-- Mininfed Bootstrap 5.3.3 CSS -->
@@ -21,77 +18,62 @@
     ></script>
 
     <!-- Custom CSS -->
-    <link
-      rel="stylesheet"
-      href="../home/index.css"
-    />
-    <link
-      rel="stylesheet"
-      href="./cart.css"
-    />
+    <link rel="stylesheet" href="../home/index.css" />
+    <link rel="stylesheet" href="./cart.css" />
 
     <!-- Custom JS -->
-    <script
-      defer
-      src="../home/index.js"
-    ></script>
-    <script
-      defer
-      src="./cart.js"
-    ></script>
+    <script defer src="../home/index.js"></script>
+    <script defer src="./cart.js"></script>
   </head>
   <body>
     <header>
       <nav class="d-flex justify-content-between align-items-center">
-        <a
-          href="../index.html"
-          class="logo"
-        >
-          <img
-            src="../images/logo.svg"
-            alt="tech bazaar logo"
-          />
+        <a href="../index.html" class="logo">
+          <img loading="lazy" src="../images/logo.svg" alt="tech bazaar logo" />
         </a>
 
         <ul class="d-flex h-100">
-          <li>
-            <a
-              href="#"
-              aria-label="search"
-            >
-              <img
-                src="../images/magnifying-glass.svg"
-                alt="search"
-              />
-            </a>
+          <li class="search-icon-wrapper">
+            <img
+              loading="lazy"
+              src="../images/magnifying-glass.svg"
+              alt="search"
+            />
+            <div class="search-dropdown">
+              <a href="#" aria-label="search">search </a>
+            </div>
           </li>
-          <li>
-            <a
-              href="../cart/cart.html"
-              aria-label="cart"
-              ><img
-                src="../images/cart.svg"
-                alt="cart"
+          <li class="cart-icon-wrapper position-relative">
+            <span class="cart-item-count">5</span>
+            <a href="#" aria-label="cart">
+              <img loading="lazy" src="../images/cart.svg" alt="cart"
             /></a>
+            <div class="cart-dropdown">Cart</div>
           </li>
-          <li>
-            <a
-              class="nav-link"
-              href="#"
-              aria-label="account"
-              ><img
-                id="profile-icon"
-                src="../images/profile.svg"
-                alt=""
-            /></a>
+          <li class="profile-icon-wrapper">
+            <img loading="lazy" src="../images/profile.svg" alt="" />
+
+            <div class="profile-dropdown">
+              <h5>Hello!</h5>
+              <p>Access account and manage orders</p>
+              <a class="nav-link" href="#" aria-label="account"
+                ><button id="profile-signup-btn" type="button">
+                  Signup/Login
+                </button></a
+              >
+              <hr />
+              <a class="dropdown-login" href="#">Please Login</a>
+            </div>
           </li>
         </ul>
       </nav>
-
+    </header>
+    <main class="container cart-container">
       <!-- signup modal -->
       <div
         id="signup-modal-background"
-        class="z-3 position-fixed top-0 end-0 bottom-0 start-0 d-flex justify-content-center align-items-center bg-black bg-opacity-75 d-none"
+        style="z-index: 100"
+        class="position-fixed top-0 end-0 bottom-0 start-0 d-flex justify-content-center align-items-center bg-black bg-opacity-75 d-none"
       >
         <form
           class="col-11 col-md-5 col-lg-4 col-xl-3 p-3 bg-dark position-relative d-flex flex-column gap-2"
@@ -101,6 +83,7 @@
         >
           <div class="close-icon-wrapper">
             <img
+              loading="lazy"
               class="close-icon"
               src="../images/close.svg"
               alt=""
@@ -118,19 +101,11 @@
           </p>
           <div>
             <label for="username"></label
-            ><input
-              id="username"
-              type="text"
-              placeholder="Username"
-            />
+            ><input id="username" type="text" placeholder="Username" />
           </div>
           <div>
             <label for="email"></label>
-            <input
-              type="email"
-              id="email"
-              placeholder="Email"
-            />
+            <input type="email" id="email" placeholder="Email" />
           </div>
           <div>
             <label for="password"></label>
@@ -143,8 +118,9 @@
               />
               <span class="px-2"
                 ><img
+                  loading="lazy"
                   id="password-visiblity-icon"
-                  src="../images/visibility_off.svg"
+                  src="./images/visibility_off.svg"
                   alt=""
               /></span>
             </div>
@@ -160,18 +136,14 @@
               />
               <span class="px-2"
                 ><img
+                  loading="lazy"
                   id="confirm-password-visiblity-icon"
-                  src="../images/visibility_off.svg"
+                  src="./images/visibility_off.svg"
                   alt=""
               /></span>
             </div>
           </div>
-          <button
-            class="w-100 md- mt-3"
-            type="submit"
-          >
-            Signup
-          </button>
+          <button class="w-100 md- mt-3" type="submit">Signup</button>
           <div class="login-with-wrapper position-relative">
             <hr class="" />
             <span class="bg-dark px-4">or login with</span>
@@ -183,8 +155,7 @@
           </div>
         </form>
       </div>
-    </header>
-    <main class="container cart-container">
+
       <div class="row">
         <section class="cart-items-section col-12 col-md-7 col-lg-8 py-2">
           <ul class="container">
@@ -192,6 +163,7 @@
               <div class="d-flex">
                 <div class="product-img">
                   <img
+                    loading="lazy"
                     src="../images/products/jbl660nc-1.png"
                     alt=""
                   />
@@ -207,10 +179,7 @@
                   </p>
                 </div>
                 <div class="delete-img">
-                  <img
-                    src="../images/delete.svg"
-                    alt=""
-                  />
+                  <img loading="lazy" src="../images/delete.svg" alt="" />
                 </div>
               </div>
               <hr />
@@ -220,6 +189,7 @@
               <div class="d-flex">
                 <div class="product-img">
                   <img
+                    loading="lazy"
                     src="../images/products/boat518-1.png"
                     alt=""
                   />
@@ -235,10 +205,7 @@
                   </p>
                 </div>
                 <div class="delete-img">
-                  <img
-                    src="../images/delete.svg"
-                    alt=""
-                  />
+                  <img loading="lazy" src="../images/delete.svg" alt="" />
                 </div>
               </div>
               <hr />
@@ -248,6 +215,7 @@
               <div class="d-flex">
                 <div class="product-img">
                   <img
+                    loading="lazy"
                     src="../images/products/boat131-1.png"
                     alt=""
                   />
@@ -263,10 +231,7 @@
                   </p>
                 </div>
                 <div class="delete-img">
-                  <img
-                    src="../images/delete.svg"
-                    alt=""
-                  />
+                  <img loading="lazy" src="../images/delete.svg" alt="" />
                 </div>
               </div>
               <hr />
@@ -276,6 +241,7 @@
               <div class="d-flex">
                 <div class="product-img">
                   <img
+                    loading="lazy"
                     src="../images/products/boat110-1.png"
                     alt=""
                   />
@@ -291,10 +257,7 @@
                   </p>
                 </div>
                 <div class="delete-img">
-                  <img
-                    src="../images/delete.svg"
-                    alt=""
-                  />
+                  <img loading="lazy" src="../images/delete.svg" alt="" />
                 </div>
               </div>
               <hr />
@@ -304,6 +267,7 @@
               <div class="d-flex">
                 <div class="product-img">
                   <img
+                    loading="lazy"
                     src="../images/products/boat410-1.png"
                     alt=""
                   />
@@ -319,10 +283,7 @@
                   </p>
                 </div>
                 <div class="delete-img">
-                  <img
-                    src="../images/delete.svg"
-                    alt=""
-                  />
+                  <img loading="lazy" src="../images/delete.svg" alt="" />
                 </div>
               </div>
             </li>
@@ -346,10 +307,7 @@
               <span>Total Price</span><span>₹22,349</span>
             </p>
             <a href="#"
-              ><button
-                class="cart-checkout-btn mt-4"
-                type="button"
-              >
+              ><button class="cart-checkout-btn mt-4" type="button">
                 Checkout
               </button></a
             >
@@ -357,11 +315,12 @@
         </section>
       </div>
     </main>
-    <footer class="pt-5">
+    <footer class="pt-5 mt-5">
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-6 col-lg-3">
             <img
+              loading="lazy"
               class="logo mb-3"
               src="../images/logo.svg"
               alt="logo"
@@ -373,21 +332,15 @@
 
             <form action="#">
               <label for="footer-email"></label>
-              <input
-                id="footer-email"
-                type="email"
-              />
-              <button
-                class="my-3 submit-btn"
-                type="submit"
-              >
-                Subscribe
-              </button>
+              <input id="footer-email" type="email" />
+              <button class="my-3 submit-btn" type="submit">Subscribe</button>
             </form>
           </div>
-          <div class="col-12 col-md-6 col-lg-3">
+          <div class="col-12 col-md-6 col-lg-3 d-flex flex-column">
             <h5>Help</h5>
-            <ul class="list-unstyled">
+            <ul
+              class="list-unstyled flex-grow-1 d-flex flex-column justify-content-evenly"
+            >
               <li><a href="#"> FAQs </a></li>
               <li><a href="#">Track Order</a></li>
               <li><a href="#">Cancel Order</a></li>
@@ -395,9 +348,11 @@
               <li><a href="#">Warranty info</a></li>
             </ul>
           </div>
-          <div class="col-12 col-md-6 col-lg-3">
+          <div class="col-12 col-md-6 col-lg-3 d-flex flex-column">
             <h5>Policies</h5>
-            <ul class="list-unstyled">
+            <ul
+              class="list-unstyled flex-grow-1 d-flex flex-column justify-content-evenly"
+            >
               <li><a href="#">Return Policy</a></li>
               <li><a href="#">Security</a></li>
               <li><a href="#">Sitemap</a></li>
@@ -405,9 +360,11 @@
               <li><a href="#">Terms & Conditions</a></li>
             </ul>
           </div>
-          <div class="col-12 col-md-6 col-lg-3">
+          <div class="col-12 col-md-6 col-lg-3 d-flex flex-column">
             <h5>Company</h5>
-            <ul class="list-unstyled">
+            <ul
+              class="list-unstyled flex-grow-1 d-flex flex-column justify-content-evenly"
+            >
               <li><a href="#">About Us</a></li>
               <li><a href="#">Contact Us</a></li>
               <li><a href="#">Service Center</a></li>
@@ -415,6 +372,16 @@
               <li><a href="#">Affiliates</a></li>
             </ul>
           </div>
+        </div>
+        <hr />
+        <div class="footer-credits">
+          <p>2024 | All Rights Reserved. Built by | SAMARTH SAVANT</p>
+          <p class="footer-social-links">
+            <span><img src="../images/fb.svg" alt="" /></span
+            ><span><img src="../images/twitter.svg" alt="" /></span
+            ><span><img src="../images/insta.svg" alt="" /></span
+            ><span><img src="../images/linkedin.svg" alt="" /></span>
+          </p>
         </div>
       </div>
     </footer>

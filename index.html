@@ -2,17 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tech Bazaar</title>
 
     <!-- Custom CSS -->
-    <link
-      rel="stylesheet"
-      href="./home/index.css"
-    />
+    <link rel="stylesheet" href="./home/index.css" />
 
     <!-- Mininfed Bootstrap 5.3.3 CSS -->
     <link
@@ -27,19 +21,15 @@
     ></script>
 
     <!-- Custom JS -->
-    <script
-      defer
-      src="./home/index.js"
-    ></script>
+    <script defer src="./home/index.js"></script>
   </head>
   <body>
     <header>
       <nav class="d-flex justify-content-between align-items-center">
-        <a
-          href="./index.html"
-          class="logo"
-        >
+        <a href="./index.html" class="logo">
           <img
+            loading="lazy"
+            loading="lazy"
             src="./images/logo.svg"
             alt="tech bazaar logo"
           />
@@ -48,61 +38,46 @@
         <ul class="d-flex h-100">
           <li class="search-icon-wrapper">
             <img
+              loading="lazy"
               src="./images/magnifying-glass.svg"
               alt="search"
             />
             <div class="search-dropdown">
-              <a
-                href="#"
-                aria-label="search"
-                >search
-              </a>
+              <a href="#" aria-label="search">search </a>
             </div>
           </li>
-          <li class="cart-icon-wrapper">
-            <img
-              src="./images/cart.svg"
-              alt="cart"
-            />
-            <div class="cart-dropdown">
-              <a
-                href="./cart/cart.html"
-                aria-label="cart"
-                >Cart</a
-              >
-            </div>
+          <li class="cart-icon-wrapper position-relative">
+            <span class="cart-item-count">5</span>
+            <a href="./cart/cart.html" aria-label="cart">
+              <img loading="lazy" src="./images/cart.svg" alt="cart"
+            /></a>
+            <div class="cart-dropdown">Cart</div>
           </li>
           <li class="profile-icon-wrapper">
-            <img
-              src="./images/profile.svg"
-              alt=""
-            />
+            <img loading="lazy" src="./images/profile.svg" alt="" />
 
             <div class="profile-dropdown">
               <h5>Hello!</h5>
               <p>Access account and manage orders</p>
-              <a
-                class="nav-link"
-                href="#"
-                aria-label="account"
-                ><button
-                  id="profile-signup-btn"
-                  type="button"
-                >
+              <a class="nav-link" href="#" aria-label="account"
+                ><button id="profile-signup-btn" type="button">
                   Signup/Login
                 </button></a
               >
               <hr />
-              <p>Please Login</p>
+              <a class="dropdown-login" href="#">Please Login</a>
             </div>
           </li>
         </ul>
       </nav>
+    </header>
 
+    <main>
       <!-- signup modal -->
       <div
         id="signup-modal-background"
-        class="z-3 position-fixed top-0 end-0 bottom-0 start-0 d-flex justify-content-center align-items-center bg-black bg-opacity-75 d-none"
+        style="z-index: 100"
+        class="position-fixed top-0 end-0 bottom-0 start-0 d-flex justify-content-center align-items-center bg-black bg-opacity-75 d-none"
       >
         <form
           class="col-11 col-md-5 col-lg-4 col-xl-3 p-3 bg-dark position-relative d-flex flex-column gap-2"
@@ -112,6 +87,7 @@
         >
           <div class="close-icon-wrapper">
             <img
+              loading="lazy"
               class="close-icon"
               src="./images/close.svg"
               alt=""
@@ -129,19 +105,11 @@
           </p>
           <div>
             <label for="username"></label
-            ><input
-              id="username"
-              type="text"
-              placeholder="Username"
-            />
+            ><input id="username" type="text" placeholder="Username" />
           </div>
           <div>
             <label for="email"></label>
-            <input
-              type="email"
-              id="email"
-              placeholder="Email"
-            />
+            <input type="email" id="email" placeholder="Email" />
           </div>
           <div>
             <label for="password"></label>
@@ -154,6 +122,7 @@
               />
               <span class="px-2"
                 ><img
+                  loading="lazy"
                   id="password-visiblity-icon"
                   src="./images/visibility_off.svg"
                   alt=""
@@ -171,18 +140,14 @@
               />
               <span class="px-2"
                 ><img
+                  loading="lazy"
                   id="confirm-password-visiblity-icon"
                   src="./images/visibility_off.svg"
                   alt=""
               /></span>
             </div>
           </div>
-          <button
-            class="w-100 md- mt-3"
-            type="submit"
-          >
-            Signup
-          </button>
+          <button class="w-100 md- mt-3" type="submit">Signup</button>
           <div class="login-with-wrapper position-relative">
             <hr class="" />
             <span class="bg-dark px-4">or login with</span>
@@ -194,15 +159,14 @@
           </div>
         </form>
       </div>
-    </header>
-    <main>
+
       <section class="hero-carousel">
         <div
           id="product-carousel"
           class="carousel slide h-100"
           data-bs-ride="carousel"
         >
-          <div class="carousel-indicators">
+          <div class="carousel-indicators d-flex gap-2">
             <button
               type="button"
               data-bs-target="#product-carousel"
@@ -247,6 +211,7 @@
                   </div>
                   <div class="col-6 h-100">
                     <img
+                      loading="lazy"
                       src="./images/products/boat131-3.png"
                       class="h-100 w-100 object-fit-contain"
                       alt="..."
@@ -256,10 +221,7 @@
               </div>
             </div>
 
-            <div
-              class="carousel-item h-100 py-4"
-              data-bs-interval="3000"
-            >
+            <div class="carousel-item h-100 py-4" data-bs-interval="3000">
               <div class="container h-100">
                 <div class="row h-100 align-content-center">
                   <div
@@ -278,6 +240,7 @@
                   </div>
                   <div class="col-6 h-100">
                     <img
+                      loading="lazy"
                       src="./images/products/sonyXb910n-1.png"
                       class="h-100 w-100 object-fit-contain"
                       alt="..."
@@ -287,10 +250,7 @@
               </div>
             </div>
 
-            <div
-              class="carousel-item h-100 py-4"
-              data-bs-interval="3000"
-            >
+            <div class="carousel-item h-100 py-4" data-bs-interval="3000">
               <div class="container h-100">
                 <div class="row h-100 align-content-center">
                   <div
@@ -309,6 +269,7 @@
                   </div>
                   <div class="col-6 h-100">
                     <img
+                      loading="lazy"
                       src="./images/products/jbl660nc-1.png"
                       class="h-100 w-100 object-fit-contain"
                       alt="..."
@@ -327,10 +288,7 @@
 
       <section class="top-products-section pt-5">
         <h4 class="text-center">Top Products</h4>
-        <nav
-          class="top-products-nav"
-          aria-label="top products"
-        >
+        <nav class="top-products-nav" aria-label="top products">
           <ul>
             <li class="product-category active">All</li>
             <li class="product-category">Headphones</li>
@@ -347,32 +305,18 @@
             >
               <div class="card bg-dark col-12 col-md-6 col-lg-3">
                 <img
+                  loading="lazy"
                   src="./images/products/jbl660nc-1.png"
                   class="card-img bg-dark"
                   alt="..."
                 />
                 <div class="card-body bg-black">
                   <span class="ratings d-flex gap-1"
-                    ><img
-                      src="./images/star.svg"
-                      alt=""
-                    />
-                    <img
-                      src="./images/star.svg"
-                      alt=""
-                    />
-                    <img
-                      src="./images/star.svg"
-                      alt=""
-                    />
-                    <img
-                      src="./images/star.svg"
-                      alt=""
-                    />
-                    <img
-                      src="./images/star.svg"
-                      alt=""
-                    />
+                    ><img loading="lazy" src="./images/star.svg" alt="" />
+                    <img loading="lazy" src="./images/star.svg" alt="" />
+                    <img loading="lazy" src="./images/star.svg" alt="" />
+                    <img loading="lazy" src="./images/star.svg" alt="" />
+                    <img loading="lazy" src="./images/star.svg" alt="" />
                   </span>
                   <h5 class="card-title pt-2">JBL Live 660NC</h5>
                   <p class="card-text">Wire Over-Ear NC Headphones</p>
@@ -380,43 +324,25 @@
                   <p class="card-price">
                     ₹9,999 <span class="old-price">₹14,999</span>
                   </p>
-                  <a
-                    href="#"
-                    class="btn container-fluid"
-                    >Add to cart</a
-                  >
+                  <a href="#" class="btn container-fluid">Add to cart</a>
                 </div>
               </div>
             </a>
 
             <div class="card bg-dark col-12 col-md-6 col-lg-3">
               <img
+                loading="lazy"
                 src="./images/products/boat518-1.png"
                 class="card-img bg-dark"
                 alt="..."
               />
               <div class="card-body bg-black">
                 <span class="ratings d-flex gap-1"
-                  ><img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
+                  ><img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
                 </span>
                 <h5 class="card-title pt-2">boAt Rockerz 518</h5>
                 <p class="card-text">On-Ear Wireless Headphones</p>
@@ -424,42 +350,24 @@
                 <p class="card-price">
                   ₹1,299 <span class="old-price">₹3,999</span>
                 </p>
-                <a
-                  href="#"
-                  class="btn container-fluid"
-                  >Add to cart</a
-                >
+                <a href="#" class="btn container-fluid">Add to cart</a>
               </div>
             </div>
 
             <div class="card bg-dark col-12 col-md-6 col-lg-3">
               <img
+                loading="lazy"
                 src="./images/products/boat131-1.png"
                 class="card-img bg-dark"
                 alt="..."
               />
               <div class="card-body bg-black">
                 <span class="ratings d-flex gap-1"
-                  ><img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
+                  ><img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
                 </span>
                 <h5 class="card-title pt-2">boAt Rockerz 131</h5>
                 <p class="card-text">Wireless In-Ear Earbuds</p>
@@ -467,42 +375,24 @@
                 <p class="card-price">
                   ₹1,099 <span class="old-price">₹2,990</span>
                 </p>
-                <a
-                  href="#"
-                  class="btn container-fluid"
-                  >Add to cart</a
-                >
+                <a href="#" class="btn container-fluid">Add to cart</a>
               </div>
             </div>
 
             <div class="card bg-dark col-12 col-md-6 col-lg-3">
               <img
+                loading="lazy"
                 src="./images/products/boat110-1.png"
                 class="card-img bg-dark"
                 alt="..."
               />
               <div class="card-body bg-black">
                 <span class="ratings d-flex gap-1"
-                  ><img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
+                  ><img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
                 </span>
                 <h5 class="card-title pt-2">boAt BassHeads 110</h5>
                 <p class="card-text">In-Ear Wired Earphones</p>
@@ -510,42 +400,24 @@
                 <p class="card-price">
                   ₹449<span class="old-price">₹999</span>
                 </p>
-                <a
-                  href="#"
-                  class="btn container-fluid"
-                  >Add to cart</a
-                >
+                <a href="#" class="btn container-fluid">Add to cart</a>
               </div>
             </div>
 
             <div class="card bg-dark col-12 col-md-6 col-lg-3">
               <img
+                loading="lazy"
                 src="./images/products/boat410-1.png"
                 class="card-img bg-dark"
                 alt="..."
               />
               <div class="card-body bg-black">
                 <span class="ratings d-flex gap-1"
-                  ><img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
+                  ><img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
                 </span>
                 <h5 class="card-title pt-2">Boat Rockerz 410</h5>
                 <p class="card-text">Bluetooth & Wired On-Ear Headphones</p>
@@ -553,42 +425,24 @@
                 <p class="card-price">
                   ₹1,599 <span class="old-price">₹2,990</span>
                 </p>
-                <a
-                  href="#"
-                  class="btn container-fluid"
-                  >Add to cart</a
-                >
+                <a href="#" class="btn container-fluid">Add to cart</a>
               </div>
             </div>
 
             <div class="card bg-dark col-12 col-md-6 col-lg-3">
               <img
+                loading="lazy"
                 src="./images/products/jbl660nc-1.png"
                 class="card-img bg-dark"
                 alt="..."
               />
               <div class="card-body bg-black">
                 <span class="ratings d-flex gap-1"
-                  ><img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
+                  ><img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
                 </span>
                 <h5 class="card-title pt-2">JBL Live 660NC</h5>
                 <p class="card-text">Wire Over-Ear NC Headphones</p>
@@ -596,42 +450,24 @@
                 <p class="card-price">
                   ₹9,999 <span class="old-price">₹14,999</span>
                 </p>
-                <a
-                  href="#"
-                  class="btn container-fluid"
-                  >Add to cart</a
-                >
+                <a href="#" class="btn container-fluid">Add to cart</a>
               </div>
             </div>
 
             <div class="card bg-dark col-12 col-md-6 col-lg-3">
               <img
+                loading="lazy"
                 src="./images/products/jbl200bt-1.png"
                 class="card-img bg-dark"
                 alt="..."
               />
               <div class="card-body bg-black">
                 <span class="ratings d-flex gap-1"
-                  ><img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
+                  ><img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
                 </span>
                 <h5 class="card-title pt-2">JBL Live 200BT</h5>
                 <p class="card-text">In-Ear Wireless Neckbands</p>
@@ -639,42 +475,24 @@
                 <p class="card-price">
                   ₹5,299 <span class="old-price">₹3,699</span>
                 </p>
-                <a
-                  href="#"
-                  class="btn container-fluid"
-                  >Add to cart</a
-                >
+                <a href="#" class="btn container-fluid">Add to cart</a>
               </div>
             </div>
 
             <div class="card bg-dark col-12 col-md-6 col-lg-3">
               <img
+                loading="lazy"
                 src="./images/products/sonyXb910n-1.png"
                 class="card-img bg-dark"
                 alt="..."
               />
               <div class="card-body bg-black">
                 <span class="ratings d-flex gap-1"
-                  ><img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
+                  ><img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
                 </span>
                 <h5 class="card-title pt-2">Sony WH-XB910N</h5>
                 <p class="card-text">Wire Over-Ear Headphones</p>
@@ -682,42 +500,24 @@
                 <p class="card-price">
                   ₹13,489 <span class="old-price">₹19,999</span>
                 </p>
-                <a
-                  href="#"
-                  class="btn container-fluid"
-                  >Add to cart</a
-                >
+                <a href="#" class="btn container-fluid">Add to cart</a>
               </div>
             </div>
 
             <div class="card bg-dark col-12 col-md-6 col-lg-3">
               <img
+                loading="lazy"
                 src="./images/products/jbl760nc-1.png"
                 class="card-img bg-dark"
                 alt="..."
               />
               <div class="card-body bg-black">
                 <span class="ratings d-flex gap-1"
-                  ><img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
+                  ><img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
                 </span>
                 <h5 class="card-title pt-2">JBL Tune 760NC</h5>
                 <p class="card-text">Wireless Over-Ear NC Headphones</p>
@@ -725,42 +525,24 @@
                 <p class="card-price">
                   ₹5,999 <span class="old-price">₹7,999</span>
                 </p>
-                <a
-                  href="#"
-                  class="btn container-fluid"
-                  >Add to cart</a
-                >
+                <a href="#" class="btn container-fluid">Add to cart</a>
               </div>
             </div>
 
             <div class="card bg-dark col-12 col-md-6 col-lg-3">
               <img
+                loading="lazy"
                 src="./images/products/boat255r-1.png"
                 class="card-img bg-dark"
                 alt="..."
               />
               <div class="card-body bg-black">
                 <span class="ratings d-flex gap-1"
-                  ><img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
+                  ><img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
                 </span>
                 <h5 class="card-title pt-2">Boat Rockerz 255</h5>
                 <p class="card-text">In-Ear Wireless Neckbands</p>
@@ -768,42 +550,24 @@
                 <p class="card-price">
                   ₹899 <span class="old-price">₹2,990</span>
                 </p>
-                <a
-                  href="#"
-                  class="btn container-fluid"
-                  >Add to cart</a
-                >
+                <a href="#" class="btn container-fluid">Add to cart</a>
               </div>
             </div>
 
             <div class="card bg-dark col-12 col-md-6 col-lg-3">
               <img
+                loading="lazy"
                 src="./images/products/jbl100-1.png"
                 class="card-img bg-dark"
                 alt="..."
               />
               <div class="card-body bg-black">
                 <span class="ratings d-flex gap-1"
-                  ><img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
-                  <img
-                    src="./images/star.svg"
-                    alt=""
-                  />
+                  ><img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
+                  <img loading="lazy" src="./images/star.svg" alt="" />
                 </span>
                 <h5 class="card-title pt-2">JBL Wave 100</h5>
                 <p class="card-text">In-Ear Truly Wireless Earbuds</p>
@@ -811,11 +575,7 @@
                 <p class="card-price">
                   ₹2,999 <span class="old-price">₹6,999</span>
                 </p>
-                <a
-                  href="#"
-                  class="btn container-fluid"
-                  >Add to cart</a
-                >
+                <a href="#" class="btn container-fluid">Add to cart</a>
               </div>
             </div>
 
@@ -853,42 +613,30 @@
 
       <section class="advantage-section container pt-5">
         <h4 class="text-center">Our Advantage</h4>
-        <div class="row row-gap-4 mt-5">
+        <div class="row row-gap-4 mt-4">
           <div class="col-12 col-md-6 col-lg-3">
-            <img
-              src="./images/delivery.svg"
-              alt=""
-            />
+            <img loading="lazy" src="./images/delivery.svg" alt="" />
             <span>
               <h6>Express Delivery</h6>
               <p>Ships in 24 Hours</p>
             </span>
           </div>
           <div class="col-12 col-md-6 col-lg-3">
-            <img
-              src="./images/shield.svg"
-              alt=""
-            />
+            <img loading="lazy" src="./images/shield.svg" alt="" />
             <span>
               <h6>Brand Warranty</h6>
               <p>100% Original products</p>
             </span>
           </div>
           <div class="col-12 col-md-6 col-lg-3">
-            <img
-              src="./images/tag.svg"
-              alt=""
-            />
+            <img loading="lazy" src="./images/tag.svg" alt="" />
             <span>
               <h6>Exciting Deals</h6>
               <p>On all prepaid orders</p>
             </span>
           </div>
           <div class="col-12 col-md-6 col-lg-3">
-            <img
-              src="./images/credit-card.svg"
-              alt=""
-            />
+            <img loading="lazy" src="./images/credit-card.svg" alt="" />
             <span>
               <h6>Secure Payments</h6>
               <p>SSL/Secure ceritficate</p>
@@ -897,11 +645,13 @@
         </div>
       </section>
     </main>
-    <footer class="pt-5">
+
+    <footer class="pt-5 mt-5">
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-6 col-lg-3">
             <img
+              loading="lazy"
               class="logo mb-3"
               src="./images/logo.svg"
               alt="logo"
@@ -913,21 +663,15 @@
 
             <form action="#">
               <label for="footer-email"></label>
-              <input
-                id="footer-email"
-                type="email"
-              />
-              <button
-                class="my-3 submit-btn"
-                type="submit"
-              >
-                Subscribe
-              </button>
+              <input id="footer-email" type="email" />
+              <button class="my-3 submit-btn" type="submit">Subscribe</button>
             </form>
           </div>
-          <div class="col-12 col-md-6 col-lg-3">
+          <div class="col-12 col-md-6 col-lg-3 d-flex flex-column">
             <h5>Help</h5>
-            <ul class="list-unstyled">
+            <ul
+              class="list-unstyled flex-grow-1 d-flex flex-column justify-content-evenly"
+            >
               <li><a href="#"> FAQs </a></li>
               <li><a href="#">Track Order</a></li>
               <li><a href="#">Cancel Order</a></li>
@@ -935,9 +679,11 @@
               <li><a href="#">Warranty info</a></li>
             </ul>
           </div>
-          <div class="col-12 col-md-6 col-lg-3">
+          <div class="col-12 col-md-6 col-lg-3 d-flex flex-column">
             <h5>Policies</h5>
-            <ul class="list-unstyled">
+            <ul
+              class="list-unstyled flex-grow-1 d-flex flex-column justify-content-evenly"
+            >
               <li><a href="#">Return Policy</a></li>
               <li><a href="#">Security</a></li>
               <li><a href="#">Sitemap</a></li>
@@ -945,9 +691,11 @@
               <li><a href="#">Terms & Conditions</a></li>
             </ul>
           </div>
-          <div class="col-12 col-md-6 col-lg-3">
+          <div class="col-12 col-md-6 col-lg-3 d-flex flex-column">
             <h5>Company</h5>
-            <ul class="list-unstyled">
+            <ul
+              class="list-unstyled flex-grow-1 d-flex flex-column justify-content-evenly"
+            >
               <li><a href="#">About Us</a></li>
               <li><a href="#">Contact Us</a></li>
               <li><a href="#">Service Center</a></li>
@@ -955,6 +703,11 @@
               <li><a href="#">Affiliates</a></li>
             </ul>
           </div>
+        </div>
+        <hr />
+        <div class="footer-credits">
+          <p>2024 | All Rights Reserved. Built by | SAMARTH SAVANT</p>
+          <p class="footer-social-links"><span><img src="./images/fb.svg" alt=""></span><span><img src="./images/twitter.svg" alt=""></span><span><img src="./images/insta.svg" alt=""></span><span><img src="./images/linkedin.svg" alt=""></span></p>
         </div>
       </div>
     </footer>

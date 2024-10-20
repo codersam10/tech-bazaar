@@ -2,10 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Details</title>
 
     <!-- Mininfed Bootstrap 5.3.3 CSS -->
@@ -21,77 +18,62 @@
     ></script>
 
     <!-- Custom CSS -->
-    <link
-      rel="stylesheet"
-      href="../home/index.css"
-    />
-    <link
-      rel="stylesheet"
-      href="./product-details.css"
-    />
+    <link rel="stylesheet" href="../home/index.css" />
+    <link rel="stylesheet" href="./product-details.css" />
 
     <!-- Custom JS -->
-    <script
-      defer
-      src="../home/index.js"
-    ></script>
-    <script
-      defer
-      src="./product-details.js"
-    ></script>
+    <script defer src="../home/index.js"></script>
+    <script defer src="./product-details.js"></script>
   </head>
   <body>
     <header>
       <nav class="d-flex justify-content-between align-items-center">
-        <a
-          href="../index.html"
-          class="logo"
-        >
-          <img
-            src="../images/logo.svg"
-            alt="tech bazaar logo"
-          />
+        <a href="../index.html" class="logo">
+          <img loading="lazy" src="../images/logo.svg" alt="tech bazaar logo" />
         </a>
 
         <ul class="d-flex h-100">
-          <li>
-            <a
-              href="#"
-              aria-label="search"
-            >
-              <img
-                src="../images/magnifying-glass.svg"
-                alt="search"
-              />
-            </a>
+          <li class="search-icon-wrapper">
+            <img
+              loading="lazy"
+              src="../images/magnifying-glass.svg"
+              alt="search"
+            />
+            <div class="search-dropdown">
+              <a href="#" aria-label="search">search </a>
+            </div>
           </li>
-          <li>
-            <a
-              href="../cart/cart.html"
-              aria-label="cart"
-              ><img
-                src="../images/cart.svg"
-                alt="cart"
+          <li class="cart-icon-wrapper position-relative">
+            <span class="cart-item-count">5</span>
+            <a href="../cart/cart.html" aria-label="cart">
+              <img loading="lazy" src="../images/cart.svg" alt="cart"
             /></a>
+            <div class="cart-dropdown">Cart</div>
           </li>
-          <li>
-            <a
-              class="nav-link"
-              href="#"
-              aria-label="account"
-              ><img
-                id="profile-icon"
-                src="../images/profile.svg"
-                alt=""
-            /></a>
+          <li class="profile-icon-wrapper">
+            <img loading="lazy" src="../images/profile.svg" alt="" />
+
+            <div class="profile-dropdown">
+              <h5>Hello!</h5>
+              <p>Access account and manage orders</p>
+              <a class="nav-link" href="#" aria-label="account"
+                ><button id="profile-signup-btn" type="button">
+                  Signup/Login
+                </button></a
+              >
+              <hr />
+              <a class="dropdown-login" href="#">Please Login</a>
+            </div>
           </li>
         </ul>
       </nav>
-
+    </header>
+    <main>
       <!-- signup modal -->
       <div
         id="signup-modal-background"
-        class="z-3 position-fixed top-0 end-0 bottom-0 start-0 d-flex justify-content-center align-items-center bg-black bg-opacity-75 d-none"
+        style="z-index: 100"
+        class="position-fixed top-0 end-0 bottom-0 start-0 d-flex justify-content-center align-items-center bg-black bg-opacity-75 d-none"
       >
         <form
           class="col-11 col-md-5 col-lg-4 col-xl-3 p-3 bg-dark position-relative d-flex flex-column gap-2"
@@ -101,6 +83,7 @@
         >
           <div class="close-icon-wrapper">
             <img
+              loading="lazy"
               class="close-icon"
               src="../images/close.svg"
               alt=""
@@ -118,19 +101,11 @@
           </p>
           <div>
             <label for="username"></label
-            ><input
-              id="username"
-              type="text"
-              placeholder="Username"
-            />
+            ><input id="username" type="text" placeholder="Username" />
           </div>
           <div>
             <label for="email"></label>
-            <input
-              type="email"
-              id="email"
-              placeholder="Email"
-            />
+            <input type="email" id="email" placeholder="Email" />
           </div>
           <div>
             <label for="password"></label>
@@ -143,8 +118,9 @@
               />
               <span class="px-2"
                 ><img
+                  loading="lazy"
                   id="password-visiblity-icon"
-                  src="../images/visibility_off.svg"
+                  src="./images/visibility_off.svg"
                   alt=""
               /></span>
             </div>
@@ -160,18 +136,14 @@
               />
               <span class="px-2"
                 ><img
+                  loading="lazy"
                   id="confirm-password-visiblity-icon"
-                  src="../images/visibility_off.svg"
+                  src="./images/visibility_off.svg"
                   alt=""
               /></span>
             </div>
           </div>
-          <button
-            class="w-100 md- mt-3"
-            type="submit"
-          >
-            Signup
-          </button>
+          <button class="w-100 md- mt-3" type="submit">Signup</button>
           <div class="login-with-wrapper position-relative">
             <hr class="" />
             <span class="bg-dark px-4">or login with</span>
@@ -183,15 +155,15 @@
           </div>
         </form>
       </div>
-    </header>
-    <main>
+
       <section class="product-details-section container py-4">
         <div class="gallery row">
           <div
-            class="gallery-mini-map col-3 col-md-2 col-lg-1 d-flex flex-column gap-3"
+            class="gallery-mini-map col-3 col-md-2 col-lg-1 d-flex flex-column justify-content-evenly gap-3"
           >
             <div>
               <img
+                loading="lazy"
                 class="active"
                 src="../images/products/jbl660nc-1.png"
                 alt=""
@@ -199,18 +171,21 @@
             </div>
             <div>
               <img
+                loading="lazy"
                 src="../images/products/jbl660nc-2.png"
                 alt=""
               />
             </div>
             <div>
               <img
+                loading="lazy"
                 src="../images/products/jbl660nc-3.png"
                 alt=""
               />
             </div>
             <div>
               <img
+                loading="lazy"
                 src="../images/products/jbl660nc-4.png"
                 alt=""
               />
@@ -218,6 +193,7 @@
           </div>
           <div class="gallery-image col-9 col-md-10 col-lg-5">
             <img
+              loading="lazy"
               class="col-8"
               width="2rem"
               src="../images/products/jbl660nc-1.png"
@@ -229,26 +205,11 @@
             <p>Wireless Over-Ear NC Headphones</p>
             <p class="d-flex align-items-center gap-2">
               <span class="ratings d-flex gap-1"
-                ><img
-                  src="../images/star.svg"
-                  alt=""
-                />
-                <img
-                  src="../images/star.svg"
-                  alt=""
-                />
-                <img
-                  src="../images/star.svg"
-                  alt=""
-                />
-                <img
-                  src="../images/star.svg"
-                  alt=""
-                />
-                <img
-                  src="../images/star.svg"
-                  alt=""
-                />
+                ><img loading="lazy" src="../images/star.svg" alt="" />
+                <img loading="lazy" src="../images/star.svg" alt="" />
+                <img loading="lazy" src="../images/star.svg" alt="" />
+                <img loading="lazy" src="../images/star.svg" alt="" />
+                <img loading="lazy" src="../images/star.svg" alt="" />
               </span>
               <span>| 1234 Ratings</span>
             </p>
@@ -276,10 +237,7 @@
           </div>
         </div>
         <div class="product-description mt-5">
-          <nav
-            class="top-products-nav"
-            aria-label="top products"
-          >
+          <nav class="top-products-nav" aria-label="top products">
             <ul>
               <li class="product-category active">Specification</li>
               <li class="product-category">Overview</li>
@@ -342,6 +300,7 @@
                     <div class="row h-100 align-content-center gap-1">
                       <div class="card bg-dark col-12 col-md-6 col-lg-3">
                         <img
+                          loading="lazy"
                           src="../images/products/boat518-1.png"
                           class="card-img bg-dark p-2"
                           alt="..."
@@ -349,22 +308,27 @@
                         <div class="card-body bg-black">
                           <span class="ratings d-flex gap-1"
                             ><img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
@@ -375,15 +339,14 @@
                           <p class="card-price">
                             ₹1,299 <span class="old-price">₹3,990</span>
                           </p>
-                          <a
-                            href="#"
-                            class="btn container-fluid"
+                          <a href="#" class="btn container-fluid"
                             >Add to cart</a
                           >
                         </div>
                       </div>
                       <div class="card bg-dark col-12 col-md-6 col-lg-3">
                         <img
+                          loading="lazy"
                           src="../images/products/jbl660nc-1.png"
                           class="card-img bg-dark p-2"
                           alt="..."
@@ -391,22 +354,27 @@
                         <div class="card-body bg-black">
                           <span class="ratings d-flex gap-1"
                             ><img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
@@ -417,15 +385,14 @@
                           <p class="card-price">
                             ₹9,999 <span class="old-price">₹14,999</span>
                           </p>
-                          <a
-                            href="#"
-                            class="btn container-fluid"
+                          <a href="#" class="btn container-fluid"
                             >Add to cart</a
                           >
                         </div>
                       </div>
                       <div class="card bg-dark col-12 col-md-6 col-lg-3">
                         <img
+                          loading="lazy"
                           src="../images/products/sonyXb910n-1.png"
                           class="card-img bg-dark p-2"
                           alt="..."
@@ -433,22 +400,27 @@
                         <div class="card-body bg-black">
                           <span class="ratings d-flex gap-1"
                             ><img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
@@ -459,15 +431,14 @@
                           <p class="card-price">
                             ₹13,489 <span class="old-price">₹19,990</span>
                           </p>
-                          <a
-                            href="#"
-                            class="btn container-fluid"
+                          <a href="#" class="btn container-fluid"
                             >Add to cart</a
                           >
                         </div>
                       </div>
                       <div class="card bg-dark col-12 col-md-6 col-lg-3">
                         <img
+                          loading="lazy"
                           src="../images/products/boat410-1.png"
                           class="card-img bg-dark p-2"
                           alt="..."
@@ -475,22 +446,27 @@
                         <div class="card-body bg-black">
                           <span class="ratings d-flex gap-1"
                             ><img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
@@ -503,9 +479,7 @@
                           <p class="card-price">
                             ₹1,599 <span class="old-price">₹2,990</span>
                           </p>
-                          <a
-                            href="#"
-                            class="btn container-fluid"
+                          <a href="#" class="btn container-fluid"
                             >Add to cart</a
                           >
                         </div>
@@ -514,14 +488,12 @@
                   </div>
                 </div>
 
-                <div
-                  class="carousel-item h-100 py-4"
-                  data-bs-interval="3000"
-                >
+                <div class="carousel-item h-100 py-4" data-bs-interval="3000">
                   <div class="container h-100">
                     <div class="row h-100 align-content-center gap-1">
                       <div class="card bg-dark col-12 col-md-6 col-lg-3">
                         <img
+                          loading="lazy"
                           src="../images/products/jbl660nc-1.png"
                           class="card-img bg-dark p-2"
                           alt="..."
@@ -529,22 +501,27 @@
                         <div class="card-body bg-black">
                           <span class="ratings d-flex gap-1"
                             ><img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
@@ -555,15 +532,14 @@
                           <p class="card-price">
                             ₹9,999 <span class="old-price">₹14,999</span>
                           </p>
-                          <a
-                            href="#"
-                            class="btn container-fluid"
+                          <a href="#" class="btn container-fluid"
                             >Add to cart</a
                           >
                         </div>
                       </div>
                       <div class="card bg-dark col-12 col-md-6 col-lg-3">
                         <img
+                          loading="lazy"
                           src="../images/products/boat518-1.png"
                           class="card-img bg-dark p-2"
                           alt="..."
@@ -571,22 +547,27 @@
                         <div class="card-body bg-black">
                           <span class="ratings d-flex gap-1"
                             ><img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
@@ -597,15 +578,14 @@
                           <p class="card-price">
                             ₹1,299 <span class="old-price">₹3,990</span>
                           </p>
-                          <a
-                            href="#"
-                            class="btn container-fluid"
+                          <a href="#" class="btn container-fluid"
                             >Add to cart</a
                           >
                         </div>
                       </div>
                       <div class="card bg-dark col-12 col-md-6 col-lg-3">
                         <img
+                          loading="lazy"
                           src="../images/products/boat410-1.png"
                           class="card-img bg-dark p-2"
                           alt="..."
@@ -613,22 +593,27 @@
                         <div class="card-body bg-black">
                           <span class="ratings d-flex gap-1"
                             ><img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
@@ -641,15 +626,14 @@
                           <p class="card-price">
                             ₹1,599 <span class="old-price">₹2,990</span>
                           </p>
-                          <a
-                            href="#"
-                            class="btn container-fluid"
+                          <a href="#" class="btn container-fluid"
                             >Add to cart</a
                           >
                         </div>
                       </div>
                       <div class="card bg-dark col-12 col-md-6 col-lg-3">
                         <img
+                          loading="lazy"
                           src="../images/products/sonyXb910n-1.png"
                           class="card-img bg-dark p-2"
                           alt="..."
@@ -657,22 +641,27 @@
                         <div class="card-body bg-black">
                           <span class="ratings d-flex gap-1"
                             ><img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
@@ -683,9 +672,7 @@
                           <p class="card-price">
                             ₹13,489 <span class="old-price">₹19,990</span>
                           </p>
-                          <a
-                            href="#"
-                            class="btn container-fluid"
+                          <a href="#" class="btn container-fluid"
                             >Add to cart</a
                           >
                         </div>
@@ -694,14 +681,12 @@
                   </div>
                 </div>
 
-                <div
-                  class="carousel-item h-100 py-4"
-                  data-bs-interval="3000"
-                >
+                <div class="carousel-item h-100 py-4" data-bs-interval="3000">
                   <div class="container h-100">
                     <div class="row h-100 align-content-center gap-1">
                       <div class="card bg-dark col-12 col-md-6 col-lg-3">
                         <img
+                          loading="lazy"
                           src="../images/products/jbl660nc-1.png"
                           class="card-img bg-dark p-2"
                           alt="..."
@@ -709,22 +694,27 @@
                         <div class="card-body bg-black">
                           <span class="ratings d-flex gap-1"
                             ><img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
@@ -735,15 +725,14 @@
                           <p class="card-price">
                             ₹9,999 <span class="old-price">₹14,999</span>
                           </p>
-                          <a
-                            href="#"
-                            class="btn container-fluid"
+                          <a href="#" class="btn container-fluid"
                             >Add to cart</a
                           >
                         </div>
                       </div>
                       <div class="card bg-dark col-12 col-md-6 col-lg-3">
                         <img
+                          loading="lazy"
                           src="../images/products/boat518-1.png"
                           class="card-img bg-dark p-2"
                           alt="..."
@@ -751,22 +740,27 @@
                         <div class="card-body bg-black">
                           <span class="ratings d-flex gap-1"
                             ><img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
@@ -777,15 +771,14 @@
                           <p class="card-price">
                             ₹1,299 <span class="old-price">₹3,990</span>
                           </p>
-                          <a
-                            href="#"
-                            class="btn container-fluid"
+                          <a href="#" class="btn container-fluid"
                             >Add to cart</a
                           >
                         </div>
                       </div>
                       <div class="card bg-dark col-12 col-md-6 col-lg-3">
                         <img
+                          loading="lazy"
                           src="../images/products/boat410-1.png"
                           class="card-img bg-dark p-2"
                           alt="..."
@@ -793,22 +786,27 @@
                         <div class="card-body bg-black">
                           <span class="ratings d-flex gap-1"
                             ><img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
@@ -821,15 +819,14 @@
                           <p class="card-price">
                             ₹1,599 <span class="old-price">₹2,990</span>
                           </p>
-                          <a
-                            href="#"
-                            class="btn container-fluid"
+                          <a href="#" class="btn container-fluid"
                             >Add to cart</a
                           >
                         </div>
                       </div>
                       <div class="card bg-dark col-12 col-md-6 col-lg-3">
                         <img
+                          loading="lazy"
                           src="../images/products/sonyXb910n-1.png"
                           class="card-img bg-dark p-2"
                           alt="..."
@@ -837,22 +834,27 @@
                         <div class="card-body bg-black">
                           <span class="ratings d-flex gap-1"
                             ><img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
@@ -863,9 +865,7 @@
                           <p class="card-price">
                             ₹13,489 <span class="old-price">₹19,990</span>
                           </p>
-                          <a
-                            href="#"
-                            class="btn container-fluid"
+                          <a href="#" class="btn container-fluid"
                             >Add to cart</a
                           >
                         </div>
@@ -874,14 +874,12 @@
                   </div>
                 </div>
 
-                <div
-                  class="carousel-item h-100 py-4"
-                  data-bs-interval="3000"
-                >
+                <div class="carousel-item h-100 py-4" data-bs-interval="3000">
                   <div class="container h-100">
                     <div class="row h-100 align-content-center gap-1">
                       <div class="card bg-dark col-12 col-md-6 col-lg-3">
                         <img
+                          loading="lazy"
                           src="../images/products/jbl660nc-1.png"
                           class="card-img bg-dark p-2"
                           alt="..."
@@ -889,22 +887,27 @@
                         <div class="card-body bg-black">
                           <span class="ratings d-flex gap-1"
                             ><img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
@@ -915,15 +918,14 @@
                           <p class="card-price">
                             ₹9,999 <span class="old-price">₹14,999</span>
                           </p>
-                          <a
-                            href="#"
-                            class="btn container-fluid"
+                          <a href="#" class="btn container-fluid"
                             >Add to cart</a
                           >
                         </div>
                       </div>
                       <div class="card bg-dark col-12 col-md-6 col-lg-3">
                         <img
+                          loading="lazy"
                           src="../images/products/boat518-1.png"
                           class="card-img bg-dark p-2"
                           alt="..."
@@ -931,22 +933,27 @@
                         <div class="card-body bg-black">
                           <span class="ratings d-flex gap-1"
                             ><img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
@@ -957,15 +964,14 @@
                           <p class="card-price">
                             ₹1,299 <span class="old-price">₹3,990</span>
                           </p>
-                          <a
-                            href="#"
-                            class="btn container-fluid"
+                          <a href="#" class="btn container-fluid"
                             >Add to cart</a
                           >
                         </div>
                       </div>
                       <div class="card bg-dark col-12 col-md-6 col-lg-3">
                         <img
+                          loading="lazy"
                           src="../images/products/boat410-1.png"
                           class="card-img bg-dark p-2"
                           alt="..."
@@ -973,22 +979,27 @@
                         <div class="card-body bg-black">
                           <span class="ratings d-flex gap-1"
                             ><img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
@@ -1001,15 +1012,14 @@
                           <p class="card-price">
                             ₹1,599 <span class="old-price">₹2,990</span>
                           </p>
-                          <a
-                            href="#"
-                            class="btn container-fluid"
+                          <a href="#" class="btn container-fluid"
                             >Add to cart</a
                           >
                         </div>
                       </div>
                       <div class="card bg-dark col-12 col-md-6 col-lg-3">
                         <img
+                          loading="lazy"
                           src="../images/products/sonyXb910n-1.png"
                           class="card-img bg-dark p-2"
                           alt="..."
@@ -1017,22 +1027,27 @@
                         <div class="card-body bg-black">
                           <span class="ratings d-flex gap-1"
                             ><img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
                             <img
+                              loading="lazy"
                               src="./images/star.svg"
                               alt=""
                             />
@@ -1043,9 +1058,7 @@
                           <p class="card-price">
                             ₹13,489 <span class="old-price">₹19,990</span>
                           </p>
-                          <a
-                            href="#"
-                            class="btn container-fluid"
+                          <a href="#" class="btn container-fluid"
                             >Add to cart</a
                           >
                         </div>
@@ -1062,40 +1075,28 @@
         <h4 class="text-center">Our Advantage</h4>
         <div class="row row-gap-4 mt-5">
           <div class="col-12 col-md-6 col-lg-3">
-            <img
-              src="../images/delivery.svg"
-              alt=""
-            />
+            <img loading="lazy" src="../images/delivery.svg" alt="" />
             <span>
               <h6>Express Delivery</h6>
               <p>Ships in 24 Hours</p>
             </span>
           </div>
           <div class="col-12 col-md-6 col-lg-3">
-            <img
-              src="../images/shield.svg"
-              alt=""
-            />
+            <img loading="lazy" src="../images/shield.svg" alt="" />
             <span>
               <h6>Brand Warranty</h6>
               <p>100% Original products</p>
             </span>
           </div>
           <div class="col-12 col-md-6 col-lg-3">
-            <img
-              src="../images/tag.svg"
-              alt=""
-            />
+            <img loading="lazy" src="../images/tag.svg" alt="" />
             <span>
               <h6>Exciting Deals</h6>
               <p>On all prepaid orders</p>
             </span>
           </div>
           <div class="col-12 col-md-6 col-lg-3">
-            <img
-              src="../images/credit-card.svg"
-              alt=""
-            />
+            <img loading="lazy" src="../images/credit-card.svg" alt="" />
             <span>
               <h6>Secure Payments</h6>
               <p>SSL/Secure ceritficate</p>
@@ -1109,6 +1110,7 @@
         <div class="row">
           <div class="col-12 col-md-6 col-lg-3">
             <img
+              loading="lazy"
               class="logo mb-3"
               src="../images/logo.svg"
               alt="logo"
@@ -1120,21 +1122,15 @@
 
             <form action="#">
               <label for="footer-email"></label>
-              <input
-                id="footer-email"
-                type="email"
-              />
-              <button
-                class="my-3"
-                type="submit"
-              >
-                Subscribe
-              </button>
+              <input id="footer-email" type="email" />
+              <button class="my-3 submit-btn" type="submit">Subscribe</button>
             </form>
           </div>
-          <div class="col-12 col-md-6 col-lg-3">
+          <div class="col-12 col-md-6 col-lg-3 d-flex flex-column">
             <h5>Help</h5>
-            <ul class="list-unstyled">
+            <ul
+              class="list-unstyled flex-grow-1 d-flex flex-column justify-content-evenly"
+            >
               <li><a href="#"> FAQs </a></li>
               <li><a href="#">Track Order</a></li>
               <li><a href="#">Cancel Order</a></li>
@@ -1142,9 +1138,11 @@
               <li><a href="#">Warranty info</a></li>
             </ul>
           </div>
-          <div class="col-12 col-md-6 col-lg-3">
+          <div class="col-12 col-md-6 col-lg-3 d-flex flex-column">
             <h5>Policies</h5>
-            <ul class="list-unstyled">
+            <ul
+              class="list-unstyled flex-grow-1 d-flex flex-column justify-content-evenly"
+            >
               <li><a href="#">Return Policy</a></li>
               <li><a href="#">Security</a></li>
               <li><a href="#">Sitemap</a></li>
@@ -1152,9 +1150,11 @@
               <li><a href="#">Terms & Conditions</a></li>
             </ul>
           </div>
-          <div class="col-12 col-md-6 col-lg-3">
+          <div class="col-12 col-md-6 col-lg-3 d-flex flex-column">
             <h5>Company</h5>
-            <ul class="list-unstyled">
+            <ul
+              class="list-unstyled flex-grow-1 d-flex flex-column justify-content-evenly"
+            >
               <li><a href="#">About Us</a></li>
               <li><a href="#">Contact Us</a></li>
               <li><a href="#">Service Center</a></li>
@@ -1162,6 +1162,16 @@
               <li><a href="#">Affiliates</a></li>
             </ul>
           </div>
+        </div>
+        <hr />
+        <div class="footer-credits">
+          <p>2024 | All Rights Reserved. Built by | SAMARTH SAVANT</p>
+          <p class="footer-social-links">
+            <span><img src="../images/fb.svg" alt="" /></span
+            ><span><img src="../images/twitter.svg" alt="" /></span
+            ><span><img src="../images/insta.svg" alt="" /></span
+            ><span><img src="../images/linkedin.svg" alt="" /></span>
+          </p>
         </div>
       </div>
     </footer>
