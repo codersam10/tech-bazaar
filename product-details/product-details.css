@@ -4,14 +4,83 @@
   object-fit: contain;
 }
 
-.gallery-mini-map img{
+.gallery-mini-map img {
   aspect-ratio: 1 !important;
+  border: 1px solid hsl(0, 0%, 50%);
+  padding: 5px;
+}
+
+.gallery-mini-map img.active{
+  border: 1px solid hsl(0, 0%, 100%);
 }
 
 .product-description-content p {
-    margin: 0 auto;
+  margin: 0 auto;
   width: 75%;
   max-width: 24rem;
   display: flex;
   justify-content: space-between;
+}
+
+.ratings ~ span {
+  color: hsl(0, 0%, 50%);
+}
+
+.product-details-price span:first-child {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.product-details-price span:nth-child(2) {
+  text-decoration: line-through;
+  color: hsl(0, 0%, 50%);
+}
+
+.product-details-savings {
+  color: hsl(120, 100%, 25%);
+}
+
+.in-stock {
+  background: hsl(120, 100%, 25%);
+  padding: 0.3rem;
+}
+
+.emi,
+.pay-later {
+  border: 1px solid hsl(0, 0%, 100%);
+}
+
+.add-to-cart {
+  border: none;
+  padding: 0.3rem 3rem;
+  border-radius: .2rem;
+  background-color: hsl(0, 100%, 50%);
+}
+
+.card {
+  color: hsl(0, 0%, 100%);
+  width: 12rem;
+  padding: 0;
+  border: 1px solid hsl(0, 0%, 50%);
+  overflow: hidden;
+}
+
+.card .card-img {
+  transition-duration: 500ms;
+  will-change: transform;
+  transition-property: transform;
+  height: 10rem;
+  object-fit: contain;
+}
+
+.card:hover .card-img {
+  transform: scale(1.1);
+}
+
+.card .card-body {
+  z-index: 1;
+}
+
+.hero-carousel {
+  height: auto !important;
 }

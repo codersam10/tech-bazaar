@@ -1,5 +1,5 @@
 // get elements section
-const profileIcon = document.getElementById("profile-icon");
+const profileSignupBtn = document.getElementById("profile-signup-btn");
 const signupModalBackground = document.getElementById(
   "signup-modal-background"
 );
@@ -17,7 +17,7 @@ const productCategories = document.getElementsByClassName("product-category");
 
 /*functionality section*/
 // open form modal
-profileIcon.addEventListener("click", () => {
+profileSignupBtn.addEventListener("click", () => {
   signupModalBackground.classList.remove("d-none");
 });
 

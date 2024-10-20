@@ -185,13 +185,14 @@
       </div>
     </header>
     <main>
-      <section class="product-details-section container">
+      <section class="product-details-section container py-4">
         <div class="gallery row">
           <div
             class="gallery-mini-map col-3 col-md-2 col-lg-1 d-flex flex-column gap-3"
           >
             <div>
               <img
+                class="active"
                 src="../images/products/jbl660nc-1.png"
                 alt=""
               />
@@ -223,7 +224,7 @@
               alt=""
             />
           </div>
-          <div class="product-details col-12 col-lg-6">
+          <div class="product-details col-12 col-lg-6 mt-4 mt-lg-0">
             <h5>JBL Live 660NC</h5>
             <p>Wireless Over-Ear NC Headphones</p>
             <p class="d-flex align-items-center gap-2">
@@ -253,28 +254,30 @@
             </p>
             <hr />
             <div class="row align-items-center">
-              <div class="col">
-                <p>₹9,999 <span>₹14,999</span></p>
-                <p>You save: ₹5,000 (33%)</p>
+              <div class="col d-flex justify-content-center flex-column">
+                <p class="product-details-price">
+                  <span>₹9,999 </span><span>₹14,999</span>
+                </p>
+                <p class="product-details-savings">You save: ₹5,000 (33%)</p>
                 <p>(Inclusive of all taxes)</p>
               </div>
               <div class="col">
-                <span>In Stock</span>
+                <span class="in-stock">In Stock</span>
               </div>
             </div>
             <hr />
             <p>Offers and Discounts</p>
-            <div class="row">
-              <div class="col-6">No cost EMI om Credit Card</div>
-              <div class="col-6">Pay Later & Avail Cashback</div>
+            <div class="d-flex justify-content-center gap-2">
+              <div class="emi p-2">No cost EMI on Credit Card</div>
+              <div class="pay-later p-2">Pay Later & Avail Cashback</div>
             </div>
             <hr />
-            <button>Add To Cart</button>
+            <button class="add-to-cart">Add To Cart</button>
           </div>
         </div>
-        <div class="product-description">
+        <div class="product-description mt-5">
           <nav
-            class="top-products-nav d-none d-sm-block"
+            class="top-products-nav"
             aria-label="top products"
           >
             <ul>
@@ -291,6 +294,768 @@
             <p><span>Connectivity</span><span>Wireless</span></p>
             <p><span>Microphone</span><span>Yes</span></p>
           </div>
+        </div>
+      </section>
+      <section class="related-product-section">
+        <h4 class="text-center">Related Products</h4>
+        <div class="container">
+          <section class="hero-carousel">
+            <div
+              id="product-carousel"
+              class="carousel slide h-100"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#product-carousel"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#product-carousel"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#product-carousel"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#product-carousel"
+                  data-bs-slide-to="3"
+                  aria-label="Slide 4"
+                ></button>
+              </div>
+              <div class="carousel-inner h-100">
+                <div
+                  class="carousel-item active h-100 py-4"
+                  data-bs-interval="3000"
+                >
+                  <div class="container h-100">
+                    <div class="row h-100 align-content-center gap-1">
+                      <div class="card bg-dark col-12 col-md-6 col-lg-3">
+                        <img
+                          src="../images/products/boat518-1.png"
+                          class="card-img bg-dark p-2"
+                          alt="..."
+                        />
+                        <div class="card-body bg-black">
+                          <span class="ratings d-flex gap-1"
+                            ><img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                          </span>
+                          <h5 class="card-title pt-2">boAt Rockerz 518</h5>
+                          <p class="card-text">On-Ear Wireless Headphone</p>
+                          <hr />
+                          <p class="card-price">
+                            ₹1,299 <span class="old-price">₹3,990</span>
+                          </p>
+                          <a
+                            href="#"
+                            class="btn container-fluid"
+                            >Add to cart</a
+                          >
+                        </div>
+                      </div>
+                      <div class="card bg-dark col-12 col-md-6 col-lg-3">
+                        <img
+                          src="../images/products/jbl660nc-1.png"
+                          class="card-img bg-dark p-2"
+                          alt="..."
+                        />
+                        <div class="card-body bg-black">
+                          <span class="ratings d-flex gap-1"
+                            ><img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                          </span>
+                          <h5 class="card-title pt-2">JBL Live 660NC</h5>
+                          <p class="card-text">Wire Over-Ear NC Headphones</p>
+                          <hr />
+                          <p class="card-price">
+                            ₹9,999 <span class="old-price">₹14,999</span>
+                          </p>
+                          <a
+                            href="#"
+                            class="btn container-fluid"
+                            >Add to cart</a
+                          >
+                        </div>
+                      </div>
+                      <div class="card bg-dark col-12 col-md-6 col-lg-3">
+                        <img
+                          src="../images/products/sonyXb910n-1.png"
+                          class="card-img bg-dark p-2"
+                          alt="..."
+                        />
+                        <div class="card-body bg-black">
+                          <span class="ratings d-flex gap-1"
+                            ><img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                          </span>
+                          <h5 class="card-title pt-2">Sony WH--XB910N</h5>
+                          <p class="card-text">Wire Over-Ear Headphones</p>
+                          <hr />
+                          <p class="card-price">
+                            ₹13,489 <span class="old-price">₹19,990</span>
+                          </p>
+                          <a
+                            href="#"
+                            class="btn container-fluid"
+                            >Add to cart</a
+                          >
+                        </div>
+                      </div>
+                      <div class="card bg-dark col-12 col-md-6 col-lg-3">
+                        <img
+                          src="../images/products/boat410-1.png"
+                          class="card-img bg-dark p-2"
+                          alt="..."
+                        />
+                        <div class="card-body bg-black">
+                          <span class="ratings d-flex gap-1"
+                            ><img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                          </span>
+                          <h5 class="card-title pt-2">boAt Rockerz 410</h5>
+                          <p class="card-text">
+                            Bluetooth & Wired On-Ear Headphones
+                          </p>
+                          <hr />
+                          <p class="card-price">
+                            ₹1,599 <span class="old-price">₹2,990</span>
+                          </p>
+                          <a
+                            href="#"
+                            class="btn container-fluid"
+                            >Add to cart</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="carousel-item h-100 py-4"
+                  data-bs-interval="3000"
+                >
+                  <div class="container h-100">
+                    <div class="row h-100 align-content-center gap-1">
+                      <div class="card bg-dark col-12 col-md-6 col-lg-3">
+                        <img
+                          src="../images/products/jbl660nc-1.png"
+                          class="card-img bg-dark p-2"
+                          alt="..."
+                        />
+                        <div class="card-body bg-black">
+                          <span class="ratings d-flex gap-1"
+                            ><img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                          </span>
+                          <h5 class="card-title pt-2">JBL Live 660NC</h5>
+                          <p class="card-text">Wire Over-Ear NC Headphones</p>
+                          <hr />
+                          <p class="card-price">
+                            ₹9,999 <span class="old-price">₹14,999</span>
+                          </p>
+                          <a
+                            href="#"
+                            class="btn container-fluid"
+                            >Add to cart</a
+                          >
+                        </div>
+                      </div>
+                      <div class="card bg-dark col-12 col-md-6 col-lg-3">
+                        <img
+                          src="../images/products/boat518-1.png"
+                          class="card-img bg-dark p-2"
+                          alt="..."
+                        />
+                        <div class="card-body bg-black">
+                          <span class="ratings d-flex gap-1"
+                            ><img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                          </span>
+                          <h5 class="card-title pt-2">boAt Rockerz 518</h5>
+                          <p class="card-text">On-Ear Wireless Headphone</p>
+                          <hr />
+                          <p class="card-price">
+                            ₹1,299 <span class="old-price">₹3,990</span>
+                          </p>
+                          <a
+                            href="#"
+                            class="btn container-fluid"
+                            >Add to cart</a
+                          >
+                        </div>
+                      </div>
+                      <div class="card bg-dark col-12 col-md-6 col-lg-3">
+                        <img
+                          src="../images/products/boat410-1.png"
+                          class="card-img bg-dark p-2"
+                          alt="..."
+                        />
+                        <div class="card-body bg-black">
+                          <span class="ratings d-flex gap-1"
+                            ><img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                          </span>
+                          <h5 class="card-title pt-2">boAt Rockerz 410</h5>
+                          <p class="card-text">
+                            Bluetooth & Wired On-Ear Headphones
+                          </p>
+                          <hr />
+                          <p class="card-price">
+                            ₹1,599 <span class="old-price">₹2,990</span>
+                          </p>
+                          <a
+                            href="#"
+                            class="btn container-fluid"
+                            >Add to cart</a
+                          >
+                        </div>
+                      </div>
+                      <div class="card bg-dark col-12 col-md-6 col-lg-3">
+                        <img
+                          src="../images/products/sonyXb910n-1.png"
+                          class="card-img bg-dark p-2"
+                          alt="..."
+                        />
+                        <div class="card-body bg-black">
+                          <span class="ratings d-flex gap-1"
+                            ><img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                          </span>
+                          <h5 class="card-title pt-2">Sony WH--XB910N</h5>
+                          <p class="card-text">Wire Over-Ear Headphones</p>
+                          <hr />
+                          <p class="card-price">
+                            ₹13,489 <span class="old-price">₹19,990</span>
+                          </p>
+                          <a
+                            href="#"
+                            class="btn container-fluid"
+                            >Add to cart</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="carousel-item h-100 py-4"
+                  data-bs-interval="3000"
+                >
+                  <div class="container h-100">
+                    <div class="row h-100 align-content-center gap-1">
+                      <div class="card bg-dark col-12 col-md-6 col-lg-3">
+                        <img
+                          src="../images/products/jbl660nc-1.png"
+                          class="card-img bg-dark p-2"
+                          alt="..."
+                        />
+                        <div class="card-body bg-black">
+                          <span class="ratings d-flex gap-1"
+                            ><img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                          </span>
+                          <h5 class="card-title pt-2">JBL Live 660NC</h5>
+                          <p class="card-text">Wire Over-Ear NC Headphones</p>
+                          <hr />
+                          <p class="card-price">
+                            ₹9,999 <span class="old-price">₹14,999</span>
+                          </p>
+                          <a
+                            href="#"
+                            class="btn container-fluid"
+                            >Add to cart</a
+                          >
+                        </div>
+                      </div>
+                      <div class="card bg-dark col-12 col-md-6 col-lg-3">
+                        <img
+                          src="../images/products/boat518-1.png"
+                          class="card-img bg-dark p-2"
+                          alt="..."
+                        />
+                        <div class="card-body bg-black">
+                          <span class="ratings d-flex gap-1"
+                            ><img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                          </span>
+                          <h5 class="card-title pt-2">boAt Rockerz 518</h5>
+                          <p class="card-text">On-Ear Wireless Headphone</p>
+                          <hr />
+                          <p class="card-price">
+                            ₹1,299 <span class="old-price">₹3,990</span>
+                          </p>
+                          <a
+                            href="#"
+                            class="btn container-fluid"
+                            >Add to cart</a
+                          >
+                        </div>
+                      </div>
+                      <div class="card bg-dark col-12 col-md-6 col-lg-3">
+                        <img
+                          src="../images/products/boat410-1.png"
+                          class="card-img bg-dark p-2"
+                          alt="..."
+                        />
+                        <div class="card-body bg-black">
+                          <span class="ratings d-flex gap-1"
+                            ><img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                          </span>
+                          <h5 class="card-title pt-2">boAt Rockerz 410</h5>
+                          <p class="card-text">
+                            Bluetooth & Wired On-Ear Headphones
+                          </p>
+                          <hr />
+                          <p class="card-price">
+                            ₹1,599 <span class="old-price">₹2,990</span>
+                          </p>
+                          <a
+                            href="#"
+                            class="btn container-fluid"
+                            >Add to cart</a
+                          >
+                        </div>
+                      </div>
+                      <div class="card bg-dark col-12 col-md-6 col-lg-3">
+                        <img
+                          src="../images/products/sonyXb910n-1.png"
+                          class="card-img bg-dark p-2"
+                          alt="..."
+                        />
+                        <div class="card-body bg-black">
+                          <span class="ratings d-flex gap-1"
+                            ><img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                          </span>
+                          <h5 class="card-title pt-2">Sony WH--XB910N</h5>
+                          <p class="card-text">Wire Over-Ear Headphones</p>
+                          <hr />
+                          <p class="card-price">
+                            ₹13,489 <span class="old-price">₹19,990</span>
+                          </p>
+                          <a
+                            href="#"
+                            class="btn container-fluid"
+                            >Add to cart</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="carousel-item h-100 py-4"
+                  data-bs-interval="3000"
+                >
+                  <div class="container h-100">
+                    <div class="row h-100 align-content-center gap-1">
+                      <div class="card bg-dark col-12 col-md-6 col-lg-3">
+                        <img
+                          src="../images/products/jbl660nc-1.png"
+                          class="card-img bg-dark p-2"
+                          alt="..."
+                        />
+                        <div class="card-body bg-black">
+                          <span class="ratings d-flex gap-1"
+                            ><img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                          </span>
+                          <h5 class="card-title pt-2">JBL Live 660NC</h5>
+                          <p class="card-text">Wire Over-Ear NC Headphones</p>
+                          <hr />
+                          <p class="card-price">
+                            ₹9,999 <span class="old-price">₹14,999</span>
+                          </p>
+                          <a
+                            href="#"
+                            class="btn container-fluid"
+                            >Add to cart</a
+                          >
+                        </div>
+                      </div>
+                      <div class="card bg-dark col-12 col-md-6 col-lg-3">
+                        <img
+                          src="../images/products/boat518-1.png"
+                          class="card-img bg-dark p-2"
+                          alt="..."
+                        />
+                        <div class="card-body bg-black">
+                          <span class="ratings d-flex gap-1"
+                            ><img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                          </span>
+                          <h5 class="card-title pt-2">boAt Rockerz 518</h5>
+                          <p class="card-text">On-Ear Wireless Headphone</p>
+                          <hr />
+                          <p class="card-price">
+                            ₹1,299 <span class="old-price">₹3,990</span>
+                          </p>
+                          <a
+                            href="#"
+                            class="btn container-fluid"
+                            >Add to cart</a
+                          >
+                        </div>
+                      </div>
+                      <div class="card bg-dark col-12 col-md-6 col-lg-3">
+                        <img
+                          src="../images/products/boat410-1.png"
+                          class="card-img bg-dark p-2"
+                          alt="..."
+                        />
+                        <div class="card-body bg-black">
+                          <span class="ratings d-flex gap-1"
+                            ><img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                          </span>
+                          <h5 class="card-title pt-2">boAt Rockerz 410</h5>
+                          <p class="card-text">
+                            Bluetooth & Wired On-Ear Headphones
+                          </p>
+                          <hr />
+                          <p class="card-price">
+                            ₹1,599 <span class="old-price">₹2,990</span>
+                          </p>
+                          <a
+                            href="#"
+                            class="btn container-fluid"
+                            >Add to cart</a
+                          >
+                        </div>
+                      </div>
+                      <div class="card bg-dark col-12 col-md-6 col-lg-3">
+                        <img
+                          src="../images/products/sonyXb910n-1.png"
+                          class="card-img bg-dark p-2"
+                          alt="..."
+                        />
+                        <div class="card-body bg-black">
+                          <span class="ratings d-flex gap-1"
+                            ><img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                            <img
+                              src="./images/star.svg"
+                              alt=""
+                            />
+                          </span>
+                          <h5 class="card-title pt-2">Sony WH--XB910N</h5>
+                          <p class="card-text">Wire Over-Ear Headphones</p>
+                          <hr />
+                          <p class="card-price">
+                            ₹13,489 <span class="old-price">₹19,990</span>
+                          </p>
+                          <a
+                            href="#"
+                            class="btn container-fluid"
+                            >Add to cart</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </section>
       <section class="advantage-section container pt-5">
@@ -339,7 +1104,7 @@
         </div>
       </section>
     </main>
-    <footer class="pt-5">
+    <footer class="pt-5 mt-5">
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-6 col-lg-3">

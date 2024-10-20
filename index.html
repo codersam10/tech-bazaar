@@ -46,36 +46,55 @@
         </a>
 
         <ul class="d-flex h-100">
-          <li>
-            <a
-              href="#"
-              aria-label="search"
-            >
-              <img
-                src="./images/magnifying-glass.svg"
-                alt="search"
-              />
-            </a>
+          <li class="search-icon-wrapper">
+            <img
+              src="./images/magnifying-glass.svg"
+              alt="search"
+            />
+            <div class="search-dropdown">
+              <a
+                href="#"
+                aria-label="search"
+                >search
+              </a>
+            </div>
           </li>
-          <li>
-            <a
-              href="./cart/cart.html"
-              aria-label="cart"
-              ><img
-                src="./images/cart.svg"
-                alt="cart"
-            /></a>
+          <li class="cart-icon-wrapper">
+            <img
+              src="./images/cart.svg"
+              alt="cart"
+            />
+            <div class="cart-dropdown">
+              <a
+                href="./cart/cart.html"
+                aria-label="cart"
+                >Cart</a
+              >
+            </div>
           </li>
-          <li>
-            <a
-              class="nav-link"
-              href="#"
-              aria-label="account"
-              ><img
-                id="profile-icon"
-                src="./images/profile.svg"
-                alt=""
-            /></a>
+          <li class="profile-icon-wrapper">
+            <img
+              src="./images/profile.svg"
+              alt=""
+            />
+
+            <div class="profile-dropdown">
+              <h5>Hello!</h5>
+              <p>Access account and manage orders</p>
+              <a
+                class="nav-link"
+                href="#"
+                aria-label="account"
+                ><button
+                  id="profile-signup-btn"
+                  type="button"
+                >
+                  Signup/Login
+                </button></a
+              >
+              <hr />
+              <p>Please Login</p>
+            </div>
           </li>
         </ul>
       </nav>
@@ -309,7 +328,7 @@
       <section class="top-products-section pt-5">
         <h4 class="text-center">Top Products</h4>
         <nav
-          class="top-products-nav d-none d-sm-block"
+          class="top-products-nav"
           aria-label="top products"
         >
           <ul>
