@@ -40,9 +40,13 @@
   color: hsl(120, 100%, 25%);
 }
 
-.in-stock {
+.in-stock{
   background: hsl(120, 100%, 25%);
   padding: 0.3rem;
+}
+
+.in-stock span{
+  text-wrap: nowrap;
 }
 
 .emi,
