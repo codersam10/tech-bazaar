@@ -14,8 +14,12 @@
   border: 1px solid hsl(0, 0%, 100%);
 }
 
-.product-description-content p {
+.top-products-nav{
+  max-width: 35rem;
   margin: 0 auto;
+}
+
+.product-description-content p {
   width: 75%;
   max-width: 24rem;
   display: flex;
@@ -40,9 +44,13 @@
   color: hsl(120, 100%, 25%);
 }
 
-.in-stock {
+.in-stock{
   background: hsl(120, 100%, 25%);
   padding: 0.3rem;
+}
+
+.in-stock span{
+  text-wrap: nowrap;
 }
 
 .emi,
@@ -59,7 +67,7 @@
 
 .card {
   color: hsl(0, 0%, 100%);
-  width: 12rem;
+  width: 20rem;
   padding: 0;
   border: 1px solid hsl(0, 0%, 50%);
   overflow: hidden;

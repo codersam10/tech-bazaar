@@ -12,8 +12,7 @@ body {
 }
 
 header {
-  box-shadow: 0px 1px 10px hsl(0, 0%, 20%);
-  backdrop-filter: blur(20px);
+  background-color: hsl(0, 0%, 20%);
   position: sticky;
   top: 0;
   left: 0;
@@ -201,10 +200,6 @@ form #login-link:hover {
   background-color: hsl(203, 89%, 53%);
 }
 
-.hero-carousel {
-  height: 20rem;
-}
-
 .carousel-indicators > button {
   width: 0.5rem !important;
   height: 0.5rem !important;
@@ -216,13 +211,13 @@ form #login-link:hover {
 }
 
 .hero-carousel .carousel-inner .row {
-  max-width: 50rem !important;
   margin: 0 auto;
 }
 
 .hero-carousel .product-details > .product-quote {
-  font-size: 1.6rem;
+  font-size: 2rem;
   font-weight: 800;
+  line-height: 2rem;
 }
 
 .hero-carousel .product-details > .product-price {
@@ -231,7 +226,7 @@ form #login-link:hover {
 }
 
 .old-price {
-  text-decoration: line-through;
+  text-decoration: line-through; 
   color: hsl(0, 0%, 50%);
 }
 
@@ -465,6 +460,8 @@ form #login-link:hover {
 .top-products-nav > ul {
   display: flex;
   justify-content: space-around;
+  max-width: 45rem;
+  margin: 0 auto;
 }
 
 .top-products-nav > ul > li {
@@ -482,7 +479,7 @@ form #login-link:hover {
 
 .top-products-section .card {
   color: hsl(0, 0%, 100%);
-  width: 15rem;
+  width: 18rem;
   padding: 0;
   border: 1px solid hsl(0, 0%, 50%);
   overflow: hidden;

@@ -16,7 +16,7 @@ body {
 }
 
 .cart-items-section {
-  height: 75vh;
+  height: 20rem;
   overflow-y: scroll;
   background-color: hsl(200, 6%, 9%);
 }
