@@ -36,6 +36,52 @@ closeIcon.addEventListener("click", () => {
   signupModalBackground.classList.add("d-none");
 });
 
+// form validation
+const userErr = document.querySelector("#username-error");
+const emailErr = document.querySelector("#email-error");
+const passErr = document.querySelector("#password-error");
+const confPassErr = document.querySelector("#confirm-password-error");
+const signUpBtn = document.querySelector("#signup-btn");
+
+signUpBtn.addEventListener("click", (e) => {
+  const uName = document.querySelector("#username");
+  const email = document.querySelector("#email");
+  const pass = document.querySelector("#password");
+  const confPass = document.querySelector("#confirm-password");
+
+  if (uName.value === "") {
+    userErr.style.display = "block";
+  } else {
+    userErr.style.display = "none";
+  }
+
+  if (email.value === "") {
+    emailErr.style.display = "block";
+  } else {
+    emailErr.style.display = "none";
+  }
+
+  if (pass.value === "") {
+    passErr.style.display = "block";
+  } else {
+    passErr.style.display = "none";
+  }
+
+  if (confPass.value === "") {
+    confPassErr.style.display = "block";
+  } else {
+    confPassErr.style.display = "none";
+  }
+
+  if (uName.value && email.value && pass.value && confPass.value) {
+    uName.value = "";
+    email.value = "";
+    pass.value = "";
+    confPass.value = "";
+    alert("Signup Successful");
+  }
+});
+
 //form passowrd hide/show functionality
 passwordVisiblityIcon.addEventListener("click", (e) => {
   if (password.type === "password") {

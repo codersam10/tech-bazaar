@@ -138,7 +138,7 @@ form .close-icon-wrapper {
 }
 
 form input,
-form button[type="submit"] {
+form #signup-btn {
   width: 100%;
   padding: 0.5rem;
   border: 1px solid hsl(0, 0%, 50%);
@@ -148,6 +148,12 @@ form button[type="submit"] {
 
 form label {
   display: none;
+}
+
+form .disp-none{
+  display: none;
+  color: hsl(0, 100%, 50%);
+  margin: 0;
 }
 
 form #password,
@@ -161,7 +167,7 @@ form #confirm-password {
   border-radius: 0.2rem;
 }
 
-form button[type="submit"] {
+form #signup-btn {
   background-color: hsl(0, 96%, 42%);
   border: none;
 }
